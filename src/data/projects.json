@@ -1,0 +1,20 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "Nom du projet",
+      "githubUrl": "https://github.com/username/project",
+      "websiteUrl": "https://project-website.com",
+      "imageFile": "aurelien.jpg",
+      "description": "Description détaillée du projet"
+    },
+    {
+      "id": 2,
+      "name": "Another project",
+      "githubUrl": "https://github.com/username/project",
+      "websiteUrl": "https://project-website.com",
+      "imageFile": "aurelien.jpg",
+      "description": "Description détaillée du projet"
+    }
+  ]
+} 

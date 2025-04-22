@@ -1,5 +1,6 @@
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
+import projectsData from "@/data/projects.json"
 
 export function HeroSection() {
   return (
@@ -24,7 +25,7 @@ export function HeroSection() {
         <Card className="bg-muted/50 p-12 py-6">
           <CardContent className="flex items-center justify-between p-0">
             <p className="text-lg font-normal">
-              16 projects released
+              {projectsData.projects.length} projects released
             </p>
             <span className="text-2xl">🔥</span>
           </CardContent>
