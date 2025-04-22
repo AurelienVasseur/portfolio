@@ -1,6 +1,7 @@
 import { HeroSection } from "@/components/sections/hero-section"
 import { ProjectsSection } from "@/components/sections/projects-section"
 import { SiteHeader } from "@/components/layout/site-header"
+import { Footer } from "@/components/layout/footer"
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
           <ProjectsSection />
         </div>
       </main>
+      <Footer />
     </div>
   )
 }
