@@ -35,7 +35,7 @@ export function HeroSection() {
             </CardContent>
           </BackgroundLines>
         </Card>
-        <Card className="bg-muted/50 p-12 py-6 col-span-2">
+        <Card className="p-12 py-6 col-span-2">
           <CardContent className="flex items-center justify-between p-0">
             <p className="text-lg font-normal">
               {projectsData.projects.length} projects released
@@ -44,7 +44,7 @@ export function HeroSection() {
           </CardContent>
         </Card>
 
-        <Card className="flex items-center justify-center bg-muted/50 p-12 py-6 col-span-3">
+        <Card className="flex items-center justify-center p-12 py-6 col-span-3">
           <CardContent className="flex gap-4 p-0 items-end">
             <TooltipProvider>
               {[
