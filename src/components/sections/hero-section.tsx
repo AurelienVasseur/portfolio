@@ -1,3 +1,5 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import projectsData from "@/data/projects.json";
@@ -10,6 +12,7 @@ import {
   TooltipContent,
 } from "../ui/tooltip";
 import { BackgroundLines } from "../ui/background-lines";
+import { FireEffect } from "../ui/fire-effect";
 
 export function HeroSection() {
   return (
@@ -35,12 +38,12 @@ export function HeroSection() {
             </CardContent>
           </BackgroundLines>
         </Card>
-        <Card className="p-12 py-6 col-span-2">
-          <CardContent className="flex items-center justify-between p-0">
+        <Card className="p-12 py-6 col-span-2 relative overflow-hidden">
+          <FireEffect />
+          <CardContent className="flex items-center justify-between p-0 relative z-10">
             <p className="text-lg font-normal">
               {projectsData.projects.length} projects released
             </p>
-            <span className="text-2xl">🔥</span>
           </CardContent>
         </Card>
 
