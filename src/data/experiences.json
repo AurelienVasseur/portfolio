@@ -2,20 +2,35 @@
   "experiences": [
     {
       "id": 1,
-      "company": "Nom de l'entreprise",
-      "position": "Titre du poste",
-      "startDate": "2023-01",
-      "endDate": "2023-12",
+      "company": "Isagri",
+      "position": "Développeur Full Stack",
+      "startDate": "2022-06",
+      "endDate": "2023-05",
       "current": false,
-      "location": "Ville, Pays",
-      "description": "Description détaillée des responsabilités et réalisations",
-      "technologies": ["React", "Node.js", "TypeScript"],
-      "client": false,
-      "logoFile": "company-logo.jpg"
+      "location": "Paris, France",
+      "description": "Description du projet client et des réalisations",
+      "technologies": ["Vue.js", "Python", "PostgreSQL"],
+      "internship": true,
+      "logoFile": "isagri.jpeg",
+      "bigCompany": true
     },
     {
       "id": 2,
-      "company": "Client Company",
+      "company": "Ring Twice",
+      "position": "Développeur Full Stack",
+      "startDate": "2022-06",
+      "endDate": "2023-05",
+      "current": false,
+      "location": "Paris, France",
+      "description": "Description du projet client et des réalisations",
+      "technologies": ["Vue.js", "Python", "PostgreSQL"],
+      "internship": true,
+      "logoFile": "ringtwice.jpeg",
+      "startup": true
+    },
+    {
+      "id": 3,
+      "company": "Aquantic",
       "position": "Développeur Full Stack",
       "startDate": "2022-06",
       "endDate": "2023-05",
@@ -24,7 +39,36 @@
       "description": "Description du projet client et des réalisations",
       "technologies": ["Vue.js", "Python", "PostgreSQL"],
       "client": true,
-      "logoFile": "client-logo.jpg"
+      "logoFile": "aquantic.jpeg",
+      "startup": true
+    },
+    {
+      "id": 4,
+      "company": "Flowbird",
+      "position": "Développeur Full Stack",
+      "startDate": "2022-06",
+      "endDate": "2023-05",
+      "current": false,
+      "location": "Paris, France",
+      "description": "Description du projet client et des réalisations",
+      "technologies": ["Vue.js", "Python", "PostgreSQL"],
+      "client": true,
+      "logoFile": "flowbird.png",
+      "bigCompany": true
+    },
+    {
+      "id": 5,
+      "company": "Resumify",
+      "position": "Développeur Full Stack",
+      "startDate": "2023-01",
+      "endDate": "",
+      "current": true,
+      "location": "Belfort, France",
+      "description": "Création d'un site web pour la création de CV en ligne",
+      "technologies": ["React", "Node.js", "TypeScript"],
+      "client": true,
+      "logoFile": "resumify.jpeg",
+      "startup": true
     }
   ]
 } 
