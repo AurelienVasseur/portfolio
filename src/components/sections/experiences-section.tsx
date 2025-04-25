@@ -37,7 +37,7 @@ export function ExperiencesSection() {
             <div className="w-full border-t border-gray-200"></div>
           </div>
           <div className="relative flex justify-center">
-            <span className="bg-white px-4 text-sm text-gray-500">
+            <span className="bg-white rounded-2xl px-4 text-sm text-gray-500 dark:bg-black dark:text-white">
               Previous experiences
             </span>
           </div>
