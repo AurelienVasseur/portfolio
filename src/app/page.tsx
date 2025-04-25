@@ -6,6 +6,8 @@ import { ExperiencesSection } from "@/components/sections/experiences-section";
 import AboutMe from "@/components/sections/about-me";
 import DotBackground from "@/components/ui/dot-background";
 import ContactSection from "@/components/sections/contact-section";
+import TestimonialsSection from "@/components/sections/testimonials-section";
+
 export default function Home() {
   return (
     <div className="relative flex min-h-screen flex-col">
@@ -18,6 +20,7 @@ export default function Home() {
           <ExperiencesSection />
           <ProjectsSection />
           <ContactSection />
+          <TestimonialsSection />
         </div>
       </main>
       <Footer />
