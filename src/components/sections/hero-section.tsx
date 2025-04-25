@@ -38,7 +38,12 @@ export function HeroSection() {
             </CardContent>
           </BackgroundLines>
         </Card>
-        <Card className="p-12 py-6 col-span-2 relative overflow-hidden">
+        <Card 
+          className="p-12 py-6 col-span-2 relative overflow-hidden transition-transform hover:scale-[1.02] cursor-pointer"
+          onClick={() => {
+            document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+          }}
+        >
           <FireEffect />
           <CardContent className="flex items-center justify-between p-0 relative z-10">
             <p className="text-lg font-normal">
