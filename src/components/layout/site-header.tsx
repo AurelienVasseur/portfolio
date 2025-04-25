@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { useScroll } from "@/hooks/use-scroll";
 import Link from "next/link";
 import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar";
+import { ThemeToggle } from "../ui/theme-toggle";
 
 export function SiteHeader() {
   const scrolled = useScroll();
@@ -16,8 +17,8 @@ export function SiteHeader() {
       )}
     >
       <div className="mx-auto max-w-5xl px-4 py-1">
-        <div className="flex h-14 items-center">
-          <div className="mr-4 hidden md:flex">
+        <div className="flex h-14 items-center justify-between">
+          <div className="flex items-center">
             <Link href="/" className="mr-6 flex items-center space-x-3">
               <Avatar className="size-11">
                 <AvatarImage src="/aurelien.jpg" />
@@ -28,6 +29,7 @@ export function SiteHeader() {
               </span>
             </Link>
           </div>
+          <ThemeToggle />
         </div>
       </div>
     </header>
