@@ -12,6 +12,7 @@ export const StickyScroll = ({
     title: string;
     description: string;
     content?: React.ReactNode;
+    image?: string;
   }[];
   contentClassName?: string;
 }) => {
@@ -95,7 +96,15 @@ export const StickyScroll = ({
           contentClassName,
         )}
       >
-        {content[activeCard].content ?? null}
+        {content[activeCard].image ? (
+          <img
+            src={content[activeCard].image}
+            alt={content[activeCard].title}
+            className="h-full w-full object-cover"
+          />
+        ) : (
+          content[activeCard].content ?? null
+        )}
       </div>
     </motion.div>
   );

@@ -1,0 +1,24 @@
+{
+  "sections": [
+    {
+      "title": "Qui suis-je ?",
+      "description": "Je suis un développeur passionné par la création d'applications web modernes et performantes. Mon expertise couvre l'ensemble de la stack web, du front-end au back-end.",
+      "image": "/images/aurelien.jpg"
+    },
+    {
+      "title": "Mes compétences",
+      "description": "React, TypeScript, Node.js, Python, et bien plus encore. Je m'efforce constamment d'apprendre de nouvelles technologies pour rester à la pointe de l'innovation.",
+      "image": "/images/skills.jpg"
+    },
+    {
+      "title": "Mon approche",
+      "description": "Je privilégie une approche centrée sur l'utilisateur, en créant des interfaces intuitives et des expériences utilisateur exceptionnelles.",
+      "image": "/images/approach.jpg"
+    },
+    {
+      "title": "Mes projets",
+      "description": "J'ai travaillé sur divers projets, des applications web aux solutions d'entreprise, en mettant l'accent sur la qualité du code et la performance.",
+      "image": "/images/projects.jpg"
+    }
+  ]
+} 
