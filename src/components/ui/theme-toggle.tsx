@@ -8,6 +8,15 @@ import { motion } from "framer-motion"
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = React.useState(false)
+
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return <Button variant="ghost" size="icon" className="relative overflow-hidden hover:bg-accent hover:text-accent-foreground" />
+  }
 
   return (
     <Button
