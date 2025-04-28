@@ -1,0 +1,97 @@
+"use client";
+
+import React, { useState, useEffect } from "react";
+import { FloatingDock } from "../ui/floating-dock";
+import {
+  IconHome,
+  IconTerminal2,
+  IconNewSection,
+  IconExchange,
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconMessage,
+} from "@tabler/icons-react";
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
+
+export default function IntroductionSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const links = [
+    {
+      title: "Learn more about me",
+      icon: (
+        <Avatar className="size-11">
+          <AvatarImage src="/aurelien.jpg" />
+          <AvatarFallback>AV</AvatarFallback>
+        </Avatar>
+      ),
+      href: "#",
+    },
+    {
+      title: "Home",
+      icon: (
+        <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#",
+    },
+    {
+      title: "Experiences",
+      icon: (
+        <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#",
+    },
+    {
+      title: "Projects",
+      icon: (
+        <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#",
+    },
+    {
+      title: "#OneMonthOneProject challenge",
+      icon: (
+        <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#",
+    },
+    {
+      title: "GitHub",
+      icon: (
+        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#",
+    },
+    {
+      title: "LinkedIn",
+      icon: (
+        <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#",
+    },
+    {
+      title: "Contact",
+      icon: (
+        <IconMessage className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#",
+    },
+  ];
+
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && isModalOpen) {
+        setIsModalOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleEscape);
+    return () => window.removeEventListener("keydown", handleEscape);
+  }, [isModalOpen]);
+
+  return (
+    <div className="flex flex-row items-center rounded-full">
+      <FloatingDock items={links} />
+    </div>
+  );
+}

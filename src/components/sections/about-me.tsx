@@ -6,7 +6,14 @@ import { Modal } from "../ui/modal";
 import { StickyScroll } from "../ui/sticky-scroll-reveal";
 import aboutData from "@/data/about.json";
 import { FloatingDock } from "../ui/floating-dock";
-import { IconHome, IconTerminal2, IconNewSection, IconExchange, IconBrandX, IconBrandGithub } from "@tabler/icons-react";
+import {
+  IconHome,
+  IconTerminal2,
+  IconNewSection,
+  IconExchange,
+  IconBrandX,
+  IconBrandGithub,
+} from "@tabler/icons-react";
 
 export default function AboutMe() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -19,7 +26,7 @@ export default function AboutMe() {
       ),
       href: "#",
     },
- 
+
     {
       title: "Products",
       icon: (
@@ -53,7 +60,7 @@ export default function AboutMe() {
       ),
       href: "#",
     },
- 
+
     {
       title: "Twitter",
       icon: (
@@ -84,10 +91,11 @@ export default function AboutMe() {
   return (
     <>
       <section className="flex justify-center items-center">
-      <FloatingDock
-        items={links}
-      />
-      
+        <div className="flex flex-row items-center bg-white rounded-full p-2 mr-6">
+          <FloatingDock desktopClassName="bg-white" items={links} />
+          <span className="font-normal">Hi, I&apos;m Aurélien</span>
+        </div>
+
         <Button size="lg" onClick={() => setIsModalOpen(true)}>
           Click here to know more about me
         </Button>
