@@ -14,6 +14,7 @@ import {
 import { BackgroundLines } from "../ui/background-lines";
 import { FireEffect } from "../ui/fire-effect";
 import Link from "next/link";
+import { Button } from "../ui/button";
 
 export function HeroSection() {
   return (
@@ -104,6 +105,33 @@ export function HeroSection() {
             </TooltipProvider>
           </CardContent>
         </Card>
+      </div>
+      <div
+        onClick={() => {
+          document
+            .getElementById("menu")
+            ?.scrollIntoView({ behavior: "smooth" });
+        }}
+        className="flex flex-col items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity mt-8 animate-bounce"
+      >
+        <span className="text-sm text-muted-foreground">Scroll to explore</span>
+        <div className="w-8 h-8 rounded-full border-2 border-muted-foreground flex items-center justify-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="text-muted-foreground"
+          >
+            <path d="M12 5v14" />
+            <path d="m19 12-7 7-7-7" />
+          </svg>
+        </div>
       </div>
     </section>
   );

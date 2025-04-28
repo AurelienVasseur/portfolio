@@ -19,8 +19,13 @@ export default function Home() {
           <HeroSection />
         </div>
         <div className="h-[120vh] relative z-10  bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/10 rounded-t-4xl flex flex-col justify-center items-center">
-          <div className="flex items-center flex-col gap-4">
-            <IntroductionSection />
+          <div
+            id="menu"
+            className="py-[10vh] h-[100vh] w-full flex flex-col justify-center items-center"
+          >
+            <div className="flex items-center flex-col gap-4">
+              <IntroductionSection />
+            </div>
           </div>
         </div>
         <div className="bg-background relative  z-20  shadow-2xl">
