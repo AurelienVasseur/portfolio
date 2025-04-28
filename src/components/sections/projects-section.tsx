@@ -73,15 +73,17 @@ export function ProjectsSection() {
         <DialogContent>
           {selectedProject && (
             <div className="h-full w-full overflow-y-auto">
-              <div className="container mx-auto py-12">
+              <div className="container mx-auto px-4 py-12">
                 <div className="max-w-5xl mx-auto space-y-8">
-                  <div className="flex items-center justify-between">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <DialogTitle className="text-3xl font-bold">
                       {selectedProject?.name}
                     </DialogTitle>
-                    <Badge variant="secondary" className="rotate-10 text-2xl">
-                      Week #{selectedProject.id}
-                    </Badge>
+                    <div className="flex md:justify-end items-center">
+                      <Badge variant="secondary" className="md:rotate-10 text-2xl">
+                        Week #{selectedProject.id}
+                      </Badge>
+                    </div>
                   </div>
                   <div className="aspect-video w-full bg-muted rounded-lg overflow-hidden">
                     <img
