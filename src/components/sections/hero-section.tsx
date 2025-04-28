@@ -16,22 +16,22 @@ import { FireEffect } from "../ui/fire-effect";
 
 export function HeroSection() {
   return (
-    <section className="space-y-4 py-24 md:py-32">
+    <section className="space-y-4 py-12 md:py-24 lg:py-32">
       <div className="grid gap-4 md:grid-cols-5">
         <Card className="col-span-5 bg-muted/50 py-0">
           <BackgroundLines className="w-full h-full rounded-xl bg-white dark:bg-black">
-            <CardContent className="relative flex flex-col items-center space-y-8 p-12 pt-16 pb-24">
+            <CardContent className="relative flex flex-col items-center space-y-4 md:space-y-8 p-6 md:p-12 pt-8 md:pt-16 pb-12 md:pb-24">
               <Badge
                 variant="outline"
-                className="rounded-full px-4 py-1 text-md font-normal"
+                className="rounded-full px-4 py-1 text-sm md:text-md font-normal"
               >
-                #OneWeekOneProject
+                #OneMonthOneProject
               </Badge>
-              <div className="space-y-4 items-start w-full mt-5">
-                <h1 className="text-[4rem] font-normal leading-none tracking-tight">
+              <div className="space-y-2 md:space-y-4 items-start w-full mt-2 md:mt-5">
+                <h1 className="text-3xl sm:text-4xl md:text-[4rem] font-normal leading-tight tracking-tight">
                   SaaS builder
                 </h1>
-                <h2 className="text-[4rem] font-normal leading-none tracking-tight text-muted-foreground">
+                <h2 className="text-3xl sm:text-4xl md:text-[4rem] font-normal leading-tight tracking-tight text-muted-foreground">
                   Passionate engineer
                 </h2>
               </div>
@@ -39,21 +39,21 @@ export function HeroSection() {
           </BackgroundLines>
         </Card>
         <Card 
-          className="p-12 py-6 col-span-2 relative overflow-hidden transition-transform hover:scale-[1.02] cursor-pointer"
+          className="p-6 md:p-12 py-4 md:py-6 col-span-5 lg:col-span-2 relative overflow-hidden transition-transform hover:scale-[1.02] cursor-pointer"
           onClick={() => {
             document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
           }}
         >
           <FireEffect />
           <CardContent className="flex items-center justify-between p-0 relative z-10">
-            <p className="text-lg font-normal">
+            <p className="text-base md:text-lg font-normal">
               {projectsData.projects.length} projects released
             </p>
           </CardContent>
         </Card>
 
-        <Card className="flex items-center justify-center p-12 py-6 col-span-3">
-          <CardContent className="flex gap-4 p-0 items-end">
+        <Card className="flex items-start lg:items-center justify-center p-6 md:p-12 py-4 md:py-6 col-span-5 lg:col-span-3">
+          <CardContent className="flex flex-wrap gap-2 md:gap-4 p-0 items-end justify-center md:justify-start">
             <TooltipProvider>
               {[
                 {
