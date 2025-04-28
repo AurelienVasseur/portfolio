@@ -11,11 +11,14 @@ export function SiteHeader() {
 
   return (
     <header
-      className={cn(
-        "sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60",
-        scrolled && "border-b shadow-sm"
-      )}
+    className={cn(
+      "sticky top-0 z-50 w-full pt-5"
+    )}
     >
+      <div className={cn(
+        "border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 rounded-3xl",
+        scrolled && "border-b shadow-sm"
+      )}>
       <div className="mx-auto max-w-5xl px-4 py-1">
         <div className="flex h-14 items-center justify-between">
           <div className="flex items-center">
@@ -31,6 +34,7 @@ export function SiteHeader() {
           </div>
           <ThemeToggle />
         </div>
+      </div>
       </div>
     </header>
   );

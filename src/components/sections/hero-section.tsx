@@ -13,10 +13,18 @@ import {
 } from "../ui/tooltip";
 import { BackgroundLines } from "../ui/background-lines";
 import { FireEffect } from "../ui/fire-effect";
+import Link from "next/link";
 
 export function HeroSection() {
   return (
-    <section className="space-y-4 pt-12 md:pt-24 lg:pt-32">
+    <section className="h-screen mx-auto max-w-5xl w-full fixed space-y-24 pt-12 md:pt-24 lg:pt-32">
+      <Link href="/" className="mr-6 flex flex-col space-x-3 space-y-2 items-center justify-center">
+        <Avatar className="size-12">
+          <AvatarImage src="/aurelien.jpg" />
+          <AvatarFallback>AV</AvatarFallback>
+        </Avatar>
+        <span className="font-normal">Hi, I&apos;m Aurélien</span>
+      </Link>
       <div className="grid gap-4 md:grid-cols-5">
         <Card className="col-span-5 bg-muted/50 py-0">
           <BackgroundLines className="w-full h-full rounded-xl bg-white dark:bg-black">
@@ -38,10 +46,12 @@ export function HeroSection() {
             </CardContent>
           </BackgroundLines>
         </Card>
-        <Card 
+        <Card
           className="p-6 md:p-12 py-4 md:py-6 col-span-5 lg:col-span-2 relative overflow-hidden transition-transform hover:scale-[1.02] cursor-pointer"
           onClick={() => {
-            document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+            document
+              .getElementById("projects")
+              ?.scrollIntoView({ behavior: "smooth" });
           }}
         >
           <FireEffect />
