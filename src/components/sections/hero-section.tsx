@@ -16,11 +16,11 @@ import { FireEffect } from "../ui/fire-effect";
 
 export function HeroSection() {
   return (
-    <section className="space-y-4 py-12 md:py-24 lg:py-32">
+    <section className="space-y-4 pt-12 md:pt-24 lg:pt-32">
       <div className="grid gap-4 md:grid-cols-5">
         <Card className="col-span-5 bg-muted/50 py-0">
           <BackgroundLines className="w-full h-full rounded-xl bg-white dark:bg-black">
-            <CardContent className="relative flex flex-col items-center space-y-4 md:space-y-8 p-6 md:p-12 pt-8 md:pt-16 pb-12 md:pb-24">
+            <CardContent className="relative flex flex-col items-center space-y-8 md:space-y-8 p-6 md:p-12 pt-16 md:pt-16 pb-24 md:pb-24">
               <Badge
                 variant="outline"
                 className="rounded-full px-4 py-1 text-sm md:text-md font-normal"
@@ -28,10 +28,10 @@ export function HeroSection() {
                 #OneMonthOneProject
               </Badge>
               <div className="space-y-2 md:space-y-4 items-start w-full mt-2 md:mt-5">
-                <h1 className="text-3xl sm:text-4xl md:text-[4rem] font-normal leading-tight tracking-tight">
+                <h1 className="text-3xl md:text-5xl lg:text-[4rem] font-normal leading-tight tracking-tight">
                   SaaS builder
                 </h1>
-                <h2 className="text-3xl sm:text-4xl md:text-[4rem] font-normal leading-tight tracking-tight text-muted-foreground">
+                <h2 className="text-3xl md:text-5xl lg:text-[4rem] font-normal leading-tight tracking-tight text-muted-foreground">
                   Passionate engineer
                 </h2>
               </div>

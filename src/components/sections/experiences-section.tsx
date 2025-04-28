@@ -19,8 +19,8 @@ export function ExperiencesSection() {
   }, []);
 
   return (
-    <section className="py-16">
-      <div className="container mx-auto px-4 mb-16">
+    <section>
+      <div className="flex flex-col gap-8 mb-16">
         <h2 className="text-3xl font-bold mb-8">I&apos;m working with them</h2>
         <div className="space-y-6">
           {activeExperiences.map((experience) => (
@@ -28,7 +28,7 @@ export function ExperiencesSection() {
           ))}
         </div>
       </div>
-      <div className="container mx-auto px-4">
+      <div className="flex flex-col gap-8">
         <div className="relative mb-8">
           <div
             className="absolute inset-0 flex items-center"

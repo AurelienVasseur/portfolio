@@ -14,7 +14,7 @@ export default function Home() {
       <SiteHeader />
       <DotBackground />
       <main className="flex-1">
-        <div className="mx-auto max-w-5xl px-4">
+        <div className="mx-auto max-w-5xl px-8 space-y-40">
           <HeroSection />
           <AboutMe />
           <ExperiencesSection />

@@ -6,7 +6,7 @@ import { caveat } from "@/app/fonts";
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-20 bg-transparent relative">
+    <section className="bg-transparent relative">
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 xl:gap-2">
         <div className="container mx-auto px-4 col-span-1 ">
           <p

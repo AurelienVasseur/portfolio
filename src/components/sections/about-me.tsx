@@ -22,7 +22,7 @@ export default function AboutMe() {
 
   return (
     <>
-      <section className="flex justify-center items-center -mt-8 mb-8">
+      <section className="flex justify-center items-center">
         <Button size="lg" onClick={() => setIsModalOpen(true)}>
           Click here to know more about me
         </Button>

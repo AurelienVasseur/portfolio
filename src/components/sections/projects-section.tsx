@@ -20,7 +20,7 @@ export function ProjectsSection() {
   >(null);
 
   return (
-    <section id="projects" className="py-12">
+    <section id="projects">
       <h2 className="text-3xl font-bold mb-8">My projects</h2>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {projectsData.projects.map((project) => (
