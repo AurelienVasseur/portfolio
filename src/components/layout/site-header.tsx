@@ -24,7 +24,7 @@ export function SiteHeader() {
                 <AvatarImage src="/aurelien.jpg" />
                 <AvatarFallback>AV</AvatarFallback>
               </Avatar>
-              <span className="hidden font-normal sm:inline-block">
+              <span className="font-normal">
                 Hi, I&apos;m Aurélien
               </span>
             </Link>
