@@ -13,7 +13,7 @@ import {
 } from "@tabler/icons-react";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 
-export default function IntroductionSection() {
+export default function MenuSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const links = [
@@ -32,7 +32,7 @@ export default function IntroductionSection() {
       icon: (
         <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#hero",
     },
     {
       title: "Experiences",

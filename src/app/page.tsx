@@ -8,7 +8,7 @@ import { ExperiencesSection } from "@/components/sections/experiences-section";
 import AboutMe from "@/components/sections/about-me";
 import ContactSection from "@/components/sections/contact-section";
 import TestimonialsSection from "@/components/sections/testimonials-section";
-import IntroductionSection from "@/components/sections/introduction-section";
+import MenuSection from "@/components/sections/menu-section";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -57,7 +57,7 @@ export default function Home() {
             className="py-[10vh] h-[100vh] w-full flex flex-col justify-center items-center"
           >
             <div className="flex items-center flex-col gap-4">
-              <IntroductionSection />
+              <MenuSection />
             </div>
           </div>
         </motion.div>

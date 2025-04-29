@@ -21,7 +21,7 @@ export function HeroSection() {
   const scale = useTransform(scrollY, [0, 300], [1, 0.8]);
 
   return (
-    <section className="h-screen mx-auto max-w-5xl w-full fixed space-y-24 pt-12 md:pt-24 lg:pt-32">
+    <section id="hero" className="h-screen mx-auto max-w-5xl w-full fixed space-y-24 pt-12 md:pt-24 lg:pt-32">
       <motion.div
         className="flex flex-col space-y-24"
         style={{
