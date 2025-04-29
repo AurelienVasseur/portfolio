@@ -12,7 +12,9 @@
       "technologies": ["Vue.js", "Python", "PostgreSQL"],
       "internship": true,
       "logoFile": "isagri.jpeg",
-      "bigCompany": true
+      "bigCompany": true,
+      "mainColor": "#9cbe23",
+      "secondaryColor": "#7a961c"
     },
     {
       "id": 2,
@@ -26,7 +28,9 @@
       "technologies": ["Vue.js", "Python", "PostgreSQL"],
       "internship": true,
       "logoFile": "ringtwice.jpeg",
-      "startup": true
+      "startup": true,
+      "mainColor": "#fe478f",
+      "secondaryColor": "#d13a77"
     },
     {
       "id": 3,
@@ -40,7 +44,9 @@
       "technologies": ["Vue.js", "Python", "PostgreSQL"],
       "client": true,
       "logoFile": "aquantic.jpeg",
-      "startup": true
+      "startup": true,
+      "mainColor": "#f2dc31",
+      "secondaryColor": "#d4c229"
     },
     {
       "id": 4,
@@ -54,7 +60,9 @@
       "technologies": ["Vue.js", "Python", "PostgreSQL"],
       "client": true,
       "logoFile": "flowbird.png",
-      "bigCompany": true
+      "bigCompany": true,
+      "mainColor": "#030aec",
+      "secondaryColor": "#0208bd"
     },
     {
       "id": 5,
@@ -68,7 +76,9 @@
       "technologies": ["React", "Node.js", "TypeScript"],
       "client": true,
       "logoFile": "resumify.jpeg",
-      "startup": true
+      "startup": true,
+      "mainColor": "#d8fa9c",
+      "secondaryColor": "#10172d"
     }
   ]
 } 
