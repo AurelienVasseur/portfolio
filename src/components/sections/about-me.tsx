@@ -59,57 +59,6 @@ export default function AboutMe() {
           </div>
         </div>
       </Modal>
-
-      <style jsx global>{`
-        @keyframes float {
-          0% {
-            transform: translate(0, 0) rotate(0deg);
-          }
-          25% {
-            transform: translate(10px, 15px) rotate(5deg);
-          }
-          50% {
-            transform: translate(5px, -10px) rotate(-5deg);
-          }
-          75% {
-            transform: translate(-10px, 5px) rotate(3deg);
-          }
-          100% {
-            transform: translate(0, 0) rotate(0deg);
-          }
-        }
-        
-        @keyframes float-particle {
-          0% {
-            transform: translate(0, 0) scale(1);
-            opacity: 0.4;
-          }
-          25% {
-            transform: translate(15px, -20px) scale(1.1);
-            opacity: 0.6;
-          }
-          50% {
-            transform: translate(5px, 15px) scale(0.9);
-            opacity: 0.4;
-          }
-          75% {
-            transform: translate(-20px, -5px) scale(1.05);
-            opacity: 0.5;
-          }
-          100% {
-            transform: translate(0, 0) scale(1);
-            opacity: 0.4;
-          }
-        }
-        
-        .animate-float {
-          animation: float infinite ease-in-out;
-        }
-        
-        .animate-float-particle {
-          animation: float-particle infinite ease-in-out;
-        }
-      `}</style>
     </>
   );
 }
