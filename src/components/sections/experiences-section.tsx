@@ -10,7 +10,7 @@ export function ExperiencesSection() {
   const [experiences, setExperiences] = useState<Experience[]>([]);
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'start',
-    containScroll: 'trimSnaps',
+    containScroll: 'trimSnaps'
   });
 
   useEffect(() => {
