@@ -30,7 +30,7 @@ export function ExperiencesSection() {
   return (
     <section>
       <div className="flex flex-col gap-8">
-        <h2 className="text-3xl font-bold mb-8">I worked with them</h2>
+        <h2 className="text-3xl font-bold mb-8">They trust me</h2>
         <div className="relative">
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex gap-6">
