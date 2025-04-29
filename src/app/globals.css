@@ -162,6 +162,27 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+.embla__progress {
+  border-radius: 1.8rem;
+  box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
+  background-color: color-mix(in oklab, var(--foreground) 15%, transparent);
+  position: relative;
+  height: 0.6rem;
+  justify-self: flex-end;
+  align-self: center;
+  width: 13rem;
+  max-width: 90%;
+  overflow: hidden;
+}
+.embla__progress__bar {
+  background-color: var(--foreground);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
