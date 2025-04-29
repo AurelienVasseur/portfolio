@@ -5,13 +5,15 @@ import experiencesData from "@/data/experiences.json";
 import CardExperience, { Experience } from "@/components/ui/card-experience";
 import useEmblaCarousel from 'embla-carousel-react';
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Autoplay from "embla-carousel-autoplay";
 
 export function ExperiencesSection() {
   const [experiences, setExperiences] = useState<Experience[]>([]);
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'start',
     containScroll: 'trimSnaps'
-  });
+  },
+  [Autoplay({ playOnInit: true, delay: 3000 })]);
 
   useEffect(() => {
     const allExperiences = experiencesData.experiences.reverse();

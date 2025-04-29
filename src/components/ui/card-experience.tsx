@@ -66,7 +66,7 @@ export default function CardExperience({
             Active
           </span>
         ) : (
-          <span className="px-3 py-1 rounded-full bg-blue-500/20 text-white text-xs font-semibold backdrop-blur-sm border border-blue-500/30 flex items-center gap-1">
+          <span className="px-3 py-1 rounded-full bg-white/10 text-white text-xs font-semibold backdrop-blur-sm border border-white/20 flex items-center gap-1">
             <CheckCircle2 className="h-3.5 w-3.5" />
             Done
           </span>
