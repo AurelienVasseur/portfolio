@@ -4,11 +4,8 @@ import {
   Card,
   CardContent,
   CardFooter,
-  CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -17,9 +14,10 @@ interface Project {
   id: number;
   name: string;
   description: string;
-  imageFile: string;
+  imageFiles: string[];
   githubUrl: string;
   websiteUrl: string;
+  size?: "normal" | "large";
 }
 
 interface CardProjectProps {
@@ -39,7 +37,7 @@ export function CardProject({ project, isExpanded = false }: CardProjectProps) {
       >
         <div className="w-full h-full relative">
           <img
-            src={`/images/${project.imageFile}`}
+            src={`/images/${project.imageFiles[0]}`}
             alt={project.name}
             className="w-full h-full object-cover"
           />
@@ -66,22 +64,16 @@ export function CardProject({ project, isExpanded = false }: CardProjectProps) {
 
   return (
     <Card className="overflow-hidden">
-      <CardHeader>
-        <div className="flex items-center justify-between">
-          <CardTitle className="text-3xl">{project.name}</CardTitle>
-          <Badge variant="secondary" className="rotate-15 text-xl">
-            Week #{project.id}
-          </Badge>
-        </div>
-      </CardHeader>
+      
       <CardContent>
         <div className="aspect-video w-full bg-muted rounded-lg overflow-hidden">
           <img
-            src={`/images/${project.imageFile}`}
+            src={`/images/${project.imageFiles[0]}`}
             alt={project.name}
             className="w-full h-full object-cover"
           />
         </div>
+        <h2 className="text-lg font-semibold mt-4">{project.name}</h2>
         <p className="mt-6 text-lg leading-relaxed">{project.description}</p>
       </CardContent>
       <CardFooter className="flex gap-4">

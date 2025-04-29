@@ -3,11 +3,11 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
-interface BaseItem {
+export interface BaseItem {
   id: string | number;
   name: string;
   description: string;
-  imageFile?: string;
+  imageFiles?: string[];
   githubUrl?: string;
   websiteUrl?: string;
   size?: "normal" | "large";

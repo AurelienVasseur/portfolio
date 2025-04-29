@@ -1,14 +1,14 @@
 "use client";
 
-import projectsData from "@/data/projects.json";
-import { LayoutCards } from "@/components/ui/layout-cards";
+import { LayoutCards, BaseItem } from "@/components/ui/layout-cards";
 import { CardProject } from "@/components/ui/card-project";
+import projectsData from "@/data/projects.json";
 
-interface Project {
+interface Project extends BaseItem {
   id: number;
   name: string;
   description: string;
-  imageFile: string;
+  imageFiles: string[];
   githubUrl: string;
   websiteUrl: string;
   size: "normal" | "large";
@@ -18,7 +18,7 @@ type ProjectData = {
   id: unknown;
   name: unknown;
   description: unknown;
-  imageFile: unknown;
+  imageFiles: unknown;
   githubUrl: unknown;
   websiteUrl: unknown;
   size: unknown;
@@ -32,7 +32,7 @@ function isProject(item: unknown): item is Project {
     typeof project.id === "number" &&
     typeof project.name === "string" &&
     typeof project.description === "string" &&
-    typeof project.imageFile === "string" &&
+    Array.isArray(project.imageFiles) &&
     typeof project.githubUrl === "string" &&
     typeof project.websiteUrl === "string" &&
     (project.size === "normal" || project.size === "large")
@@ -46,7 +46,7 @@ export function ProjectsSection() {
     <section id="projects">
       <h2 className="text-3xl font-bold mb-8">Build. Build. Build.</h2>
 
-      <LayoutCards
+      <LayoutCards<Project>
         items={projects}
         renderCard={(project) => <CardProject project={project} />}
         renderExpanded={(project) => <CardProject project={project} isExpanded />}

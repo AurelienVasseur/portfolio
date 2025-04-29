@@ -5,7 +5,7 @@
       "name": "Nom du projet",
       "githubUrl": "https://github.com/username/project",
       "websiteUrl": "https://project-website.com",
-      "imageFile": "aurelien.jpg",
+      "imageFiles": ["aurelien.jpg", "aurelien.jpg", "aurelien.jpg"],
       "description": "Description détaillée du projet",
       "size": "normal"
     },
@@ -14,7 +14,7 @@
       "name": "Another project",
       "githubUrl": "https://github.com/username/project",
       "websiteUrl": "https://project-website.com",
-      "imageFile": "aurelien.jpg",
+      "imageFiles": ["aurelien.jpg", "aurelien.jpg", "aurelien.jpg"],
       "description": "Description détaillée du projet",
       "size": "large"
     },{
@@ -22,7 +22,7 @@
       "name": "My third project",
       "githubUrl": "https://github.com/username/project",
       "websiteUrl": "https://project-website.com",
-      "imageFile": "aurelien.jpg",
+      "imageFiles": ["aurelien.jpg", "aurelien.jpg", "aurelien.jpg"],
       "description": "Description détaillée du projet",
       "size": "large"
     },
@@ -31,7 +31,7 @@
       "name": "Nom du projet",
       "githubUrl": "https://github.com/username/project",
       "websiteUrl": "https://project-website.com",
-      "imageFile": "aurelien.jpg",
+      "imageFiles": ["aurelien.jpg", "aurelien.jpg", "aurelien.jpg"],
       "description": "Description détaillée du projet",
       "size": "normal"
     }
