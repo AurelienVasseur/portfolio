@@ -13,8 +13,7 @@
       "internship": true,
       "logoFile": "isagri.jpeg",
       "bigCompany": true,
-      "mainColor": "#9cbe23",
-      "secondaryColor": "#7a961c"
+      "mainColor": "#022909"
     },
     {
       "id": 2,
@@ -29,8 +28,7 @@
       "internship": true,
       "logoFile": "ringtwice.jpeg",
       "startup": true,
-      "mainColor": "#fe478f",
-      "secondaryColor": "#d13a77"
+      "mainColor": "#fe478f"
     },
     {
       "id": 3,
@@ -61,8 +59,7 @@
       "client": true,
       "logoFile": "flowbird.png",
       "bigCompany": true,
-      "mainColor": "#030aec",
-      "secondaryColor": "#0208bd"
+      "mainColor": "#030aec"
     },
     {
       "id": 5,
@@ -77,8 +74,7 @@
       "client": true,
       "logoFile": "resumify.jpeg",
       "startup": true,
-      "mainColor": "#d8fa9c",
-      "secondaryColor": "#10172d"
+      "mainColor": "#0e1a23"
     }
   ]
 } 

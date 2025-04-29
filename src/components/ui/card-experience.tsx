@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { CheckCircle2 } from "lucide-react";
-import { BackgroundParticlesAnimation } from "./background-particles-animation";
 
 export interface Experience {
   id: number;
@@ -18,7 +17,6 @@ export interface Experience {
   startup?: boolean;
   bigCompany?: boolean;
   mainColor?: string;
-  secondaryColor?: string;
 }
 
 export default function CardExperience({
@@ -35,20 +33,19 @@ export default function CardExperience({
   else if (experience.client) mainLabel = "Projet Client";
   else if (experience.internship) mainLabel = "Internship";
 
-  // Couleurs par défaut si non spécifiées
+  // Couleur par défaut si non spécifiée
   const mainColor = experience.mainColor || "#1a1a1a";
-  const secondaryColor = experience.secondaryColor || "#2a2a2a";
 
   return (
     <div
       className="relative rounded-3xl overflow-hidden min-h-[600px] min-w-[400px] flex flex-col items-center group transition-all duration-300 cursor-pointer"
       style={{
-        background: secondaryColor,
+        background: mainColor,
       }}
       onClick={() => setIsClicked(!isClicked)}
     >
       {/* <BackgroundParticlesAnimation /> */}
-      
+
       {/* Badge principal en haut à gauche */}
       {mainLabel && (
         <div className="absolute top-5 left-5 z-10">
@@ -70,7 +67,8 @@ export default function CardExperience({
           </span>
         ) : (
           <span className="px-3 py-1 rounded-full bg-blue-500/20 text-white text-xs font-semibold backdrop-blur-sm border border-blue-500/30 flex items-center gap-1">
-            <CheckCircle2 className="h-3.5 w-3.5" />Done
+            <CheckCircle2 className="h-3.5 w-3.5" />
+            Done
           </span>
         )}
       </div>
@@ -85,19 +83,24 @@ export default function CardExperience({
       </div>
 
       {/* Détails de l'expérience avec backdrop blur */}
-      <div 
+      <div
         className={`absolute inset-0 bg-black/50 backdrop-blur-md z-20 p-6 flex flex-col items-center justify-center text-white transition-all duration-300 ease-in-out ${
-          isClicked 
-            ? "opacity-100 pointer-events-auto" 
+          isClicked
+            ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
         }`}
       >
-        <div className={`transform transition-all duration-300 ease-in-out ${
-          isClicked ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-        }`}>
+        <div
+          className={`transform transition-all duration-300 ease-in-out ${
+            isClicked ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+          }`}
+        >
           <h3 className="text-2xl font-bold mb-2">{experience.position}</h3>
           <h4 className="text-xl mb-4">{experience.company}</h4>
-          <p className="text-sm mb-2">{experience.startDate} - {experience.current ? "Present" : experience.endDate}</p>
+          <p className="text-sm mb-2">
+            {experience.startDate} -{" "}
+            {experience.current ? "Present" : experience.endDate}
+          </p>
           <p className="text-sm mb-4">{experience.location}</p>
           <p className="text-sm text-center mb-4">{experience.description}</p>
           <div className="flex flex-wrap gap-2 justify-center">
