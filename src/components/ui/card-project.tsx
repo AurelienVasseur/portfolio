@@ -33,11 +33,11 @@ export function CardProject({ project, isExpanded = false }: CardProjectProps) {
   if (!isExpanded) {
     return (
       <Card
-        className="p-0 overflow-hidden transition-all h-full"
+        className="p-0 overflow-hidden transition-all h-80"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <div className="aspect-video w-full relative">
+        <div className="w-full h-full relative">
           <img
             src={`/images/${project.imageFile}`}
             alt={project.name}

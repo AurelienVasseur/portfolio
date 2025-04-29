@@ -10,6 +10,7 @@ interface BaseItem {
   imageFile?: string;
   githubUrl?: string;
   websiteUrl?: string;
+  size?: "normal" | "large";
 }
 
 interface LayoutCardsProps<T extends BaseItem> {
@@ -28,13 +29,16 @@ export function LayoutCards<T extends BaseItem>({
 
   return (
     <>
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-3 gap-6">
         {items.map((item) => (
           <motion.div
             key={item.id}
             layoutId={`card-${item.id}`}
             onClick={() => setSelectedId(item.id)}
-            className="cursor-pointer"
+            className={`cursor-pointer transition-all flex flex-col col-span-3
+              ${item.size === "large" ? "col-span-3 md:col-span-2 h-80" : "md:col-span-1 h-80"}
+            `}
+            style={{ maxWidth: '100%' }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
           >
             {renderCard(item)}
