@@ -19,7 +19,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${jetbrainsMono.variable} antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-screen bg-background font-mono antialiased">
+      <body className="min-h-screen bg-background font-mono antialiased hide-scrollbar overflow-hidden">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function ContactSection() {
   return (
-    <section>
+    <section id="contact">
       <div className="grid gap-4 md:grid-cols-5">
         <Link href="https://www.linkedin.com/in/aurelien-vasseur/" target="_blank" rel="noopener noreferrer" className="col-span-5">
         <Card className="col-span-5 bg-muted/50 p-0 overflow-hidden transition-transform hover:scale-[1.02] cursor-pointer">

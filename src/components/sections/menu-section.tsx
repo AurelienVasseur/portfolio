@@ -74,7 +74,7 @@ export default function MenuSection() {
       icon: (
         <IconMessage className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#contact",
     },
   ];
 
@@ -90,7 +90,7 @@ export default function MenuSection() {
   }, [isModalOpen]);
 
   return (
-    <div className="flex flex-row items-center rounded-full">
+    <div  className="flex flex-row items-center rounded-full">
       <FloatingDock items={links} />
     </div>
   );
