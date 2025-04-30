@@ -29,6 +29,7 @@ export const BackgroundLines = ({
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
         className="absolute inset-0 w-full h-full"
+        preserveAspectRatio="xMidYMid slice"
       >
         <SVG svgOptions={svgOptions} />
       </motion.svg>
