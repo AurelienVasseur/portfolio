@@ -21,9 +21,12 @@ export function HeroSection() {
   const scale = useTransform(scrollY, [0, 300], [1, 0.8]);
 
   return (
-    <section id="hero" className="h-screen mx-auto max-w-5xl w-full fixed space-y-24 pt-12 md:pt-24 lg:pt-32">
+    <section
+      id="hero"
+      className="h-screen mx-auto max-w-5xl w-full fixed space-y-24 flex flex-col justify-center"
+    >
       <motion.div
-        className="flex flex-col space-y-24"
+        className="flex flex-col space-y-7"
         style={{
           scale,
         }}
@@ -124,7 +127,7 @@ export function HeroSection() {
             </CardContent>
           </Card>
         </div>
-        <div
+        {/* <div
           onClick={() => {
             document
               .getElementById("menu")
@@ -152,7 +155,7 @@ export function HeroSection() {
               <path d="m19 12-7 7-7-7" />
             </svg>
           </div>
-        </div>
+        </div> */}
       </motion.div>
     </section>
   );
