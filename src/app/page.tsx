@@ -44,13 +44,13 @@ export default function Home() {
   };
 
   // Blocage/déblocage du scroll
-  useEffect(() => {
-    /*if (contentInView) {
+  /*useEffect(() => {
+    if (contentInView) {
       document.body.style.overflow = "auto";
     } else {
       document.body.style.overflow = "hidden";
-    }*/
-  }, [heroInView, menuInView, contentInView]);
+    }
+  }, [heroInView, menuInView, contentInView]);*/
 
   // Toute action dans hero => scroll vers menu
   useEffect(() => {
