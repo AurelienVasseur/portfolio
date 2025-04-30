@@ -8,7 +8,7 @@ import { ThemeToggle } from "../ui/theme-toggle";
 export function SiteHeader() {
   return (
     <header id="header" className={cn("sticky top-0 z-50 pt-5")}>
-      <div className="shadow-sm bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 rounded-3xl">
+      <div className="shadow-sm bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 rounded-2xl">
         <div className="mx-auto max-w-5xl px-4 py-1">
           <div className="flex h-14 items-center justify-between">
             <div className="flex items-center">

@@ -75,15 +75,19 @@ export default function Home() {
   // ESCAPE dans menu => retour au hero
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape" && menuInView && !locked.current) {
+      if (locked.current || !menuInView) return;
+      if (e.key === "Escape") {
         e.preventDefault();
         scrollToTop();
+      }
+      if (e.key === " " || e.key === "Enter") {
+        e.preventDefault(); // empêche le scroll de la page avec space
+        scrollTo("content", "start");
       }
     };
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [menuInView]);
-
 
   // Si on est tout en haut de content → scroll vers menu
   useEffect(() => {
