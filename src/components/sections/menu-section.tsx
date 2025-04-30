@@ -28,42 +28,45 @@ export default function MenuSection() {
           <AvatarFallback>AV</AvatarFallback>
         </Avatar>
       ),
-      href: "#",
+      id: "content",
+      scrollBlock: "start",
     },
     {
       title: "Home",
       icon: (
         <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#hero",
+      scrollToTop: true,
     },
     {
       title: "Experiences",
       icon: (
         <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      id: "experiences",
+      scrollBlock: "center",
     },
     {
       title: "Projects",
       icon: (
         <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      id: "projects",
+      scrollBlock: "start",
     },
-    {
+    /*{
       title: "#OneMonthOneProject challenge",
       icon: (
         <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#",
-    },
+    },*/
     {
       title: "GitHub",
       icon: (
         <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://github.com/AurelienVasseur",
     },
     {
       title: "LinkedIn",

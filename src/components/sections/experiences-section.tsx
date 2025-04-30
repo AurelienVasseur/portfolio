@@ -30,7 +30,7 @@ export function ExperiencesSection() {
   const scrollNext = () => emblaApi && emblaApi.scrollNext();
 
   return (
-    <section>
+    <section id="experiences">
       <div className="flex flex-col gap-8">
         <h2 className="text-3xl font-bold mb-8">They trust me</h2>
         <div className="relative">

@@ -28,6 +28,7 @@ export const FloatingDock = ({
     href?: string;
     id?: string;
     scrollBlock?: "start" | "center";
+    scrollToTop?: boolean;
   }[];
   desktopClassName?: string;
   mobileClassName?: string;
@@ -50,6 +51,7 @@ const FloatingDockMobile = ({
     href?: string;
     id?: string;
     scrollBlock?: "start" | "center";
+    scrollToTop?: boolean;
   }[];
   className?: string;
 }) => {
@@ -111,6 +113,7 @@ const FloatingDockDesktop = ({
     href?: string;
     id?: string;
     scrollBlock?: "start" | "center";
+    scrollToTop?: boolean;
   }[];
   className?: string;
 }) => {
@@ -138,6 +141,7 @@ function IconContainer({
   href,
   id,
   scrollBlock = "start",
+  scrollToTop,
 }: {
   mouseX: MotionValue;
   title: string;
@@ -145,6 +149,7 @@ function IconContainer({
   href?: string;
   id?: string;
   scrollBlock?: "start" | "center";
+  scrollToTop?: boolean;
 }) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -198,6 +203,9 @@ function IconContainer({
       if (target) {
         target.scrollIntoView({ behavior: "smooth", block: scrollBlock });
       }
+    } else if (scrollToTop) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
