@@ -9,7 +9,7 @@ import AboutMe from "@/components/sections/about-me";
 import ContactSection from "@/components/sections/contact-section";
 import TestimonialsSection from "@/components/sections/testimonials-section";
 import MenuSection from "@/components/sections/menu-section";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useInView } from "framer-motion";
 
 export default function Home() {

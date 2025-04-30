@@ -67,14 +67,15 @@ export default function MenuSection() {
       icon: (
         <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://www.linkedin.com/in/aurelien-vasseur/",
     },
     {
       title: "Contact",
       icon: (
         <IconMessage className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#contact",
+      id: "contact",
+      scrollBlock: "center",
     },
   ];
 
@@ -90,8 +91,11 @@ export default function MenuSection() {
   }, [isModalOpen]);
 
   return (
-    <div  className="flex flex-row items-center rounded-full">
-      <FloatingDock items={links} />
+    <div className="flex flex-row items-center rounded-full">
+      <FloatingDock items={links.map(link => ({
+        ...link,
+        scrollBlock: link.scrollBlock as "center" | "start" | undefined
+      }))} />
     </div>
   );
 }
