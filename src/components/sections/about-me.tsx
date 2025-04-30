@@ -24,7 +24,7 @@ export default function AboutMe() {
 
   return (
     <>
-      <section className="flex justify-center items-center">
+      <section id="about" className="flex justify-center items-center">
         <Card 
           className="w-full bg-muted/50 p-0 overflow-hidden transition-transform hover:scale-[1.02] cursor-pointer"
           onClick={() => setIsModalOpen(true)}
@@ -40,10 +40,10 @@ export default function AboutMe() {
                 About Me
               </Badge>
               <div className="space-y-2 md:space-y-4 items-start w-full mt-2 md:mt-5">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[4rem] font-normal leading-tight tracking-tight text-white">
+                <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[4rem] font-normal leading-tight tracking-tight text-white">
                   Know more about me
                 </h1>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[4rem] font-normal leading-tight tracking-tight text-white/70">
+                <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-[4rem] font-normal leading-tight tracking-tight text-white/70">
                   Discover my journey
                 </h2>
               </div>

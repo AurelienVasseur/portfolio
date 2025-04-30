@@ -37,9 +37,7 @@ export function ExperiencesSection() {
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex gap-6">
               {experiences.map((experience) => (
-                <div key={experience.id} >
-                  <CardExperience experience={experience} />
-                </div>
+                  <CardExperience key={experience.id} experience={experience} />
               ))}
             </div>
           </div>

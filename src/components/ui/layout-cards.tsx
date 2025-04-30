@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export interface BaseItem {
   id: string | number;
@@ -11,6 +11,7 @@ export interface BaseItem {
   githubUrl?: string;
   websiteUrl?: string;
   size?: "normal" | "large";
+  workInProgress?: boolean;
 }
 
 interface LayoutCardsProps<T extends BaseItem> {
@@ -27,6 +28,17 @@ export function LayoutCards<T extends BaseItem>({
   const [selectedId, setSelectedId] = useState<string | number | null>(null);
   const selectedItem = items.find((item) => item.id === selectedId);
 
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && selectedId) {
+        setSelectedId(null);
+      }
+    };
+
+    window.addEventListener("keydown", handleEscape);
+    return () => window.removeEventListener("keydown", handleEscape);
+  }, [selectedId]);
+
   return (
     <>
       <div className="grid grid-cols-3 gap-6">
@@ -34,9 +46,10 @@ export function LayoutCards<T extends BaseItem>({
           <motion.div
             key={item.id}
             layoutId={`card-${item.id}`}
-            onClick={() => setSelectedId(item.id)}
+            onClick={() => !item.workInProgress && setSelectedId(item.id)}
             className={`cursor-pointer transition-all flex flex-col col-span-3
               ${item.size === "large" ? "col-span-3 md:col-span-2 h-80" : "md:col-span-1 h-80"}
+              ${item.workInProgress ? 'cursor-not-allowed' : ''}
             `}
             style={{ maxWidth: '100%' }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}

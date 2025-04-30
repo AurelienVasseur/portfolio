@@ -38,7 +38,7 @@ export default function CardExperience({
 
   return (
     <div
-      className="relative rounded-3xl overflow-hidden min-h-[600px] min-w-[400px] flex flex-col items-center group transition-all duration-300 cursor-pointer"
+      className="relative rounded-3xl overflow-hidden min-h-[500px] min-w-full md:min-w-[400px] flex flex-col items-center group transition-all duration-300 cursor-pointer"
       style={{
         background: mainColor,
       }}

@@ -7,7 +7,9 @@
       "websiteUrl": "https://project-website.com",
       "imageFiles": ["aurelien.jpg", "aurelien.jpg", "aurelien.jpg"],
       "description": "Description détaillée du projet",
-      "size": "normal"
+      "size": "normal",
+      "technologies": ["React", "TypeScript", "Next.js", "TailwindCSS"],
+      "workInProgress": true
     },
     {
       "id": 2,
@@ -16,15 +18,18 @@
       "websiteUrl": "https://project-website.com",
       "imageFiles": ["aurelien.jpg", "aurelien.jpg", "aurelien.jpg"],
       "description": "Description détaillée du projet",
-      "size": "large"
-    },{
+      "size": "large",
+      "technologies": ["Vue.js", "JavaScript", "Node.js", "Express"]
+    },
+    {
       "id": 3,
       "name": "My third project",
       "githubUrl": "https://github.com/username/project",
       "websiteUrl": "https://project-website.com",
       "imageFiles": ["aurelien.jpg", "aurelien.jpg", "aurelien.jpg"],
       "description": "Description détaillée du projet",
-      "size": "large"
+      "size": "large",
+      "technologies": ["Angular", "TypeScript", "Firebase", "Material UI"]
     },
     {
       "id": 4,
@@ -33,7 +38,8 @@
       "websiteUrl": "https://project-website.com",
       "imageFiles": ["aurelien.jpg", "aurelien.jpg", "aurelien.jpg"],
       "description": "Description détaillée du projet",
-      "size": "normal"
+      "size": "normal",
+      "technologies": ["Svelte", "JavaScript", "D3.js", "CSS"]
     }
   ]
 } 

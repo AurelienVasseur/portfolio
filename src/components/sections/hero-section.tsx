@@ -23,7 +23,7 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="h-screen mx-auto max-w-5xl w-full fixed space-y-24 flex flex-col justify-center"
+      className="h-screen mx-auto max-w-5xl w-full fixed space-y-24 flex flex-col justify-center px-8"
     >
       <motion.div
         className="flex flex-col space-y-7"
@@ -58,10 +58,10 @@ export function HeroSection() {
                   #OneMonthOneProject
                 </Badge>
                 <div className="space-y-2 md:space-y-4 items-start w-full mt-2 md:mt-5">
-                  <h1 className="text-3xl md:text-5xl lg:text-[4rem] font-normal leading-tight tracking-tight">
+                  <h1 className="text-2xl md:text-5xl lg:text-[4rem] font-normal leading-tight tracking-tight">
                     Entrepreneur
                   </h1>
-                  <h2 className="text-3xl md:text-5xl lg:text-[4rem] font-normal leading-tight tracking-tight text-muted-foreground">
+                  <h2 className="text-2xl md:text-5xl lg:text-[4rem] font-normal leading-tight tracking-tight text-muted-foreground">
                     Passionate engineer
                   </h2>
                 </div>
@@ -84,7 +84,7 @@ export function HeroSection() {
             </CardContent>
           </Card>
 
-          <Card className="flex items-start lg:items-center justify-center p-6 md:p-12 py-4 md:py-6 col-span-5 lg:col-span-3">
+          <Card className="hidden md:flex items-start lg:items-center justify-center p-6 md:p-12 py-4 md:py-6 col-span-5 lg:col-span-3">
             <CardContent className="flex flex-wrap gap-2 md:gap-4 p-0 items-end justify-center md:justify-start">
               <TooltipProvider>
                 {[
@@ -127,13 +127,13 @@ export function HeroSection() {
             </CardContent>
           </Card>
         </div>
-        {/* <div
+        <div
           onClick={() => {
             document
-              .getElementById("menu")
+              .getElementById("header")
               ?.scrollIntoView({ behavior: "smooth" });
           }}
-          className="flex flex-col items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity mt-8 animate-bounce"
+          className="flex md:hidden flex-col items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity mt-8 animate-bounce"
         >
           <span className="text-sm text-muted-foreground">
             Scroll to explore
@@ -155,7 +155,7 @@ export function HeroSection() {
               <path d="m19 12-7 7-7-7" />
             </svg>
           </div>
-        </div> */}
+        </div>
       </motion.div>
     </section>
   );

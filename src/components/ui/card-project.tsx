@@ -19,6 +19,8 @@ interface Project {
   githubUrl: string;
   websiteUrl: string;
   size?: "normal" | "large";
+  technologies: string[];
+  workInProgress?: boolean;
 }
 
 interface CardProjectProps {
@@ -66,9 +68,12 @@ export function CardProject({ project, isExpanded = false }: CardProjectProps) {
             alt={project.name}
             className="w-full h-full object-cover"
           />
+          {project.workInProgress && (
+            <div className="absolute inset-0 backdrop-blur-sm z-10" />
+          )}
           <div className="absolute inset-0 transition-colors" />
           <motion.div
-            className="absolute top-4 left-4"
+            className="absolute top-4 left-4 z-20 flex flex-col gap-2 items-start"
             initial={{ y: -50, opacity: 0 }}
             animate={isHovered ? { y: 0, opacity: 1 } : { y: -50, opacity: 0 }}
             transition={{
@@ -81,6 +86,11 @@ export function CardProject({ project, isExpanded = false }: CardProjectProps) {
             <span className="px-4 py-1 rounded-full bg-white/30 text-white text-xs font-semibold  border border-white/20">
               {project.name}
             </span>
+            {project.workInProgress && (
+              <span className="px-4 py-1 rounded-full bg-orange-500/30 text-orange-400 text-xs font-semibold border border-orange-500/20">
+                🚧 Work in progress
+              </span>
+            )}
           </motion.div>
         </div>
       </Card>
@@ -111,22 +121,34 @@ export function CardProject({ project, isExpanded = false }: CardProjectProps) {
             <ProgressBar progress={scrollProgress} />
           )}
         </div>
-        <div className="flex flex-row gap-2 items-center align-middle">
+        <div className="flex flex-col md:flex-row gap-2 md:items-center md:align-middle">
           <h2 className="text-xl font-semibold">{project.name}</h2>
-          <Link href={project.githubUrl}>
-            <span className="px-2 py-0.5 rounded-full bg-primary/30 text-primary text-xs border border-primary/20 hover:bg-primary/40 transition-colors cursor-pointer flex items-center gap-1">
-              <IconBrandGithub className="h-3 w-3" />
-              GitHub
-            </span>
-          </Link>
-          <Link href={project.websiteUrl}>
-            <span className="px-2 py-0.5 rounded-full bg-blue-500/30 text-blue-500 text-xs border border-blue-500/20 hover:bg-blue-500/40 transition-colors cursor-pointer flex items-center gap-1">
-              <IconRocket className="h-3 w-3" />
-              Explore
-            </span>
-          </Link>
+          <div className="flex flex-row gap-2 items-center align-middle">
+            <Link href={project.githubUrl}>
+              <span className="px-2 py-0.5 rounded-full bg-primary/30 text-primary text-xs border border-primary/20 hover:bg-primary/40 transition-colors cursor-pointer flex items-center gap-1">
+                <IconBrandGithub className="h-3 w-3" />
+                GitHub
+              </span>
+            </Link>
+            <Link href={project.websiteUrl}>
+              <span className="px-2 py-0.5 rounded-full bg-blue-500/30 text-blue-500 text-xs border border-blue-500/20 hover:bg-blue-500/40 transition-colors cursor-pointer flex items-center gap-1">
+                <IconRocket className="h-3 w-3" />
+                Explore
+              </span>
+            </Link>
+          </div>
         </div>
         <p className="text-md leading-relaxed">{project.description}</p>
+        <div className="flex flex-wrap gap-2">
+          {project.technologies.map((tech, index) => (
+            <span
+              key={index}
+              className="px-2 py-0.5 rounded-full text-foreground text-xs backdrop-blur-sm border border-foreground/20"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
       </CardContent>
     </Card>
   );

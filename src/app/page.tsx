@@ -31,7 +31,7 @@ export default function Home() {
           <HeroSection />
         </div>
         <motion.div
-          className="h-[120vh] relative z-10 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/10 rounded-t-4xl flex flex-col justify-center items-center"
+          className="h-[120vh] relative z-10 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/10 rounded-t-4xl hidden md:flex flex-col justify-center items-center"
           onWheel={(e) => {
             if (e.deltaY < 0) {
               // Scrolling up
@@ -64,7 +64,7 @@ export default function Home() {
         <div id="content" className="bg-background relative  z-20  shadow-2xl">
           {/* <div className="h-screen w-full bg-red-500 relative z-5">
           </div> */}
-          <div className=" flex flex-col px-8 pt-10 space-y-40 mx-auto max-w-5xl">
+          <div className=" flex flex-col px-8 pt-10 space-y-24 md:space-y-32 mx-auto max-w-5xl">
             <SiteHeader />
 
             <AboutMe />
