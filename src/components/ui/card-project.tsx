@@ -1,14 +1,15 @@
 "use client";
 
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { EmblaCarouselType } from "embla-carousel";
+import { ProgressBar } from "./progress-bar";
 
 import Autoplay from "embla-carousel-autoplay";
+import { IconBrandGithub, IconRocket } from "@tabler/icons-react";
 
 interface Project {
   id: number;
@@ -88,9 +89,9 @@ export function CardProject({ project, isExpanded = false }: CardProjectProps) {
 
   return (
     <Card className="overflow-hidden">
-      <CardContent>
-        <div className="embla">
-          <div className="overflow-hidden embla__viewport" ref={emblaRef}>
+      <CardContent className="flex flex-col gap-6">
+        <div className="flex flex-col gap-2">
+          <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex gap-6">
               {project.imageFiles.map((image, index) => (
                 <div key={index} className="flex-[0_0_100%]">
@@ -106,27 +107,27 @@ export function CardProject({ project, isExpanded = false }: CardProjectProps) {
             </div>
           </div>
 
-          <div className="flex justify-center gap-2 mt-4">
-            <div className="embla__progress">
-              <div
-                className="embla__progress__bar"
-                style={{ transform: `translate3d(${scrollProgress}%,0px,0px)` }}
-              />
-            </div>
-          </div>
+          {project.imageFiles.length > 1 && (
+            <ProgressBar progress={scrollProgress} />
+          )}
         </div>
-
-        <h2 className="text-lg font-semibold mt-4">{project.name}</h2>
-        <p className="mt-6 text-lg leading-relaxed">{project.description}</p>
+        <div className="flex flex-row gap-2 items-center align-middle">
+          <h2 className="text-xl font-semibold">{project.name}</h2>
+          <Link href={project.githubUrl}>
+            <span className="px-2 py-0.5 rounded-full bg-primary/30 text-primary text-xs border border-primary/20 hover:bg-primary/40 transition-colors cursor-pointer flex items-center gap-1">
+              <IconBrandGithub className="h-3 w-3" />
+              GitHub
+            </span>
+          </Link>
+          <Link href={project.websiteUrl}>
+            <span className="px-2 py-0.5 rounded-full bg-blue-500/30 text-blue-500 text-xs border border-blue-500/20 hover:bg-blue-500/40 transition-colors cursor-pointer flex items-center gap-1">
+              <IconRocket className="h-3 w-3" />
+              Explore
+            </span>
+          </Link>
+        </div>
+        <p className="text-md leading-relaxed">{project.description}</p>
       </CardContent>
-      <CardFooter className="flex gap-4">
-        <Button asChild variant="outline" size="lg">
-          <Link href={project.githubUrl}>Voir sur GitHub</Link>
-        </Button>
-        <Button asChild size="lg">
-          <Link href={project.websiteUrl}>Visiter le site</Link>
-        </Button>
-      </CardFooter>
     </Card>
   );
 }

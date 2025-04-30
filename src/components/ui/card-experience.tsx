@@ -84,7 +84,7 @@ export default function CardExperience({
 
       {/* Détails de l'expérience avec backdrop blur */}
       <div
-        className={`absolute inset-0 bg-black/50 backdrop-blur-md z-20 p-6 flex flex-col items-center justify-center text-white transition-all duration-300 ease-in-out ${
+        className={`absolute inset-0 bg-black/50 backdrop-blur-md z-20 p-6 flex flex-col text-white transition-all duration-300 ease-in-out ${
           isClicked
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
@@ -102,8 +102,8 @@ export default function CardExperience({
             {experience.current ? "Present" : experience.endDate}
           </p>
           <p className="text-sm mb-4">{experience.location}</p>
-          <p className="text-sm text-center mb-4">{experience.description}</p>
-          <div className="flex flex-wrap gap-2 justify-center">
+          <p className="text-sm mb-4">{experience.description}</p>
+          <div className="flex flex-wrap gap-2">
             {experience.technologies.map((tech, index) => (
               <span
                 key={index}
