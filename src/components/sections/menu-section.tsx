@@ -10,6 +10,9 @@ import {
   IconBrandGithub,
   IconBrandLinkedin,
   IconMessage,
+  IconKeyboard,
+  IconArrowBack,
+  IconArrowForward,
 } from "@tabler/icons-react";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 
@@ -91,11 +94,38 @@ export default function MenuSection() {
   }, [isModalOpen]);
 
   return (
-    <div className="flex flex-row items-center rounded-full">
-      <FloatingDock items={links.map(link => ({
-        ...link,
-        scrollBlock: link.scrollBlock as "center" | "start" | undefined
-      }))} />
+    <div className="flex flex-col items-center gap-6">
+      <div className="flex flex-row items-center rounded-full">
+        <FloatingDock items={links.map(link => ({
+          ...link,
+          scrollBlock: link.scrollBlock as "center" | "start" | undefined
+        }))} />
+      </div>
+      <div className="flex items-center gap-4 text-xs text-neutral-400 dark:text-neutral-500">
+        <div className="flex items-center gap-1">
+          <IconArrowBack className="h-3 w-3" />
+          <span>Press</span>
+          <kbd className="flex items-center gap-1 rounded border border-neutral-200 bg-neutral-100 px-1.5 py-0.5 dark:border-neutral-700 dark:bg-neutral-800">
+            <IconKeyboard className="h-3 w-3" />
+            <span>Esc</span>
+          </kbd>
+          <span>to close</span>
+        </div>
+        <div className="flex items-center gap-1">
+          <span>Press</span>
+          <kbd className="flex items-center gap-1 rounded border border-neutral-200 bg-neutral-100 px-1.5 py-0.5 dark:border-neutral-700 dark:bg-neutral-800">
+            <IconKeyboard className="h-3 w-3" />
+            <span>Enter</span>
+          </kbd>
+          <span>or</span>
+          <kbd className="flex items-center gap-1 rounded border border-neutral-200 bg-neutral-100 px-1.5 py-0.5 dark:border-neutral-700 dark:bg-neutral-800">
+            <IconKeyboard className="h-3 w-3" />
+            <span>Space</span>
+          </kbd>
+          <span>to continue</span>
+          <IconArrowForward className="h-3 w-3" />
+        </div>
+      </div>
     </div>
   );
 }
