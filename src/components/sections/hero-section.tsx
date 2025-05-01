@@ -15,10 +15,13 @@ import { BackgroundLines } from "../ui/background-lines";
 import { FireEffect } from "../ui/fire-effect";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export function HeroSection() {
   const { scrollY } = useScroll();
   const scale = useTransform(scrollY, [0, 300], [1, 0.8]);
+  const t = useTranslations("HomePage");
+
 
   return (
     <section
@@ -46,6 +49,7 @@ export function HeroSection() {
             <AvatarFallback>AV</AvatarFallback>
           </Avatar>
           <span className="font-normal">Hi, I&apos;m Aurélien</span>
+          <p>Title : {t("title")}</p>
         </Link>
         <div className="grid gap-4 md:grid-cols-5">
           <Card className="col-span-5 bg-muted/50 py-0">

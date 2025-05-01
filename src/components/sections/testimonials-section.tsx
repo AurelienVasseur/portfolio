@@ -2,7 +2,7 @@ import React from "react";
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 import testimonialsData from "@/data/testimonials.json";
 import { cn } from "@/lib/utils";
-import { caveat } from "@/app/fonts";
+import { caveat } from "@/app/[locale]/fonts";
 
 export default function TestimonialsSection() {
   return (
