@@ -72,7 +72,7 @@ export function SiteHeader() {
             { pathname, params },
             { locale: newLocale }
           );
-        }, 1000);
+        }, 700);
       }, 1500);
     }, 1500);
   };
@@ -152,7 +152,12 @@ export function SiteHeader() {
                       initial={{ y: locale === l.locale ? 0 : -80, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       exit={{ y: locale === l.locale ? 80 : 0, opacity: 0 }}
-                      transition={{ duration: 0.7 }}
+                      transition={{
+                        duration: 0.7,
+                        type: "spring",
+                        stiffness: 100,
+                        damping: 10,
+                      }}
                       className=" fixed w-full h-full flex items-center justify-center text-white text-2xl"
                     >
                       {l.message}

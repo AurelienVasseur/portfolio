@@ -23,7 +23,7 @@ export function ThemeToggle() {
       variant="ghost"
       size="icon"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-      className="relative overflow-hidden hover:bg-accent hover:text-accent-foreground"
+      className="relative overflow-hidden hover:bg-accent hover:text-accent-foreground ring-0 focus:ring-0 focus:ring-offset-0"
     >
       <motion.div
         initial={false}
