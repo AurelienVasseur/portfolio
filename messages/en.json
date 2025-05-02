@@ -86,6 +86,41 @@
         "github": "GitHub",
         "explore": "Explore"
       }
+    },
+    "contact": {
+      "title": "Let's talk",
+      "subtitle": "I'm always looking for new opportunities",
+      "badge": "Contact me - LinkedIn only"
+    },
+    "testimonials": {
+      "title": "Still not convinced that I'm the one who will save humanity with my undeniable and absolutely mind-blowing skills?",
+      "items": {
+        "1": {
+          "quote": "Working with this developer was like having a superhero on our team. They didn't just write code, they saved the world one function at a time!",
+          "name": "John Smith",
+          "title": "CTO at TechSaviors Inc."
+        },
+        "2": {
+          "quote": "I've never seen someone debug with such precision. It's like they have X-ray vision for code!",
+          "name": "Sarah Johnson",
+          "title": "Lead Developer at CodeCraft"
+        },
+        "3": {
+          "quote": "They don't just solve problems, they prevent them from existing in the first place. It's like having a time machine for bugs!",
+          "name": "Michael Chen",
+          "title": "Product Manager at FutureTech"
+        },
+        "4": {
+          "quote": "Their code is so clean, it makes Marie Kondo look like a hoarder!",
+          "name": "Emma Davis",
+          "title": "Senior Developer at CleanCode"
+        },
+        "5": {
+          "quote": "I'm pretty sure they can speak binary. The way they optimize code is just... otherworldly!",
+          "name": "Alex Rivera",
+          "title": "Tech Lead at BinaryBusters"
+        }
+      }
     }
   }
 }

@@ -86,6 +86,41 @@
         "github": "GitHub",
         "explore": "Explorer"
       }
+    },
+    "contact": {
+      "title": "Parlons-en",
+      "subtitle": "Je suis toujours à la recherche de nouvelles opportunités",
+      "badge": "Contactez-moi - LinkedIn uniquement"
+    },
+    "testimonials": {
+      "title": "Toujours pas convaincu que je suis celui qui sauvera l'humanité avec mes compétences indéniables et absolument époustouflantes ?",
+      "items": {
+        "1": {
+          "quote": "Travailler avec ce développeur, c'était comme avoir un super-héros dans notre équipe. Il n'écrivait pas juste du code, il sauvait le monde une fonction à la fois !",
+          "name": "John Smith",
+          "title": "CTO chez TechSaviors Inc."
+        },
+        "2": {
+          "quote": "Je n'ai jamais vu quelqu'un déboguer avec une telle précision. C'est comme s'il avait une vision aux rayons X pour le code !",
+          "name": "Sarah Johnson",
+          "title": "Lead Developer chez CodeCraft"
+        },
+        "3": {
+          "quote": "Il ne résout pas juste les problèmes, il les empêche d'exister en premier lieu. C'est comme avoir une machine à remonter le temps pour les bugs !",
+          "name": "Michael Chen",
+          "title": "Product Manager chez FutureTech"
+        },
+        "4": {
+          "quote": "Son code est si propre que ça fait passer Marie Kondo pour une accumulatrice compulsive !",
+          "name": "Emma Davis",
+          "title": "Senior Developer chez CleanCode"
+        },
+        "5": {
+          "quote": "Je suis presque sûr qu'il peut parler en binaire. La façon dont il optimise le code est tout simplement... surnaturelle !",
+          "name": "Alex Rivera",
+          "title": "Tech Lead chez BinaryBusters"
+        }
+      }
     }
   }
 }

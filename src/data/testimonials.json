@@ -1,29 +1,34 @@
 {
   "testimonials": [
     {
-      "quote": "Working with this developer was like having a superhero on our team. They didn't just write code, they saved the world one function at a time!",
-      "name": "John Smith",
-      "title": "CTO at TechSaviors Inc."
+      "id": "1",
+      "quoteKey": "testimonials.items.1.quote",
+      "nameKey": "testimonials.items.1.name",
+      "titleKey": "testimonials.items.1.title"
     },
     {
-      "quote": "I've never seen someone debug with such precision. It's like they have X-ray vision for code!",
-      "name": "Sarah Johnson",
-      "title": "Lead Developer at CodeCraft"
+      "id": "2",
+      "quoteKey": "testimonials.items.2.quote",
+      "nameKey": "testimonials.items.2.name",
+      "titleKey": "testimonials.items.2.title"
     },
     {
-      "quote": "They don't just solve problems, they prevent them from existing in the first place. It's like having a time machine for bugs!",
-      "name": "Michael Chen",
-      "title": "Product Manager at FutureTech"
+      "id": "3",
+      "quoteKey": "testimonials.items.3.quote",
+      "nameKey": "testimonials.items.3.name",
+      "titleKey": "testimonials.items.3.title"
     },
     {
-      "quote": "Their code is so clean, it makes Marie Kondo look like a hoarder!",
-      "name": "Emma Davis",
-      "title": "Senior Developer at CleanCode"
+      "id": "4",
+      "quoteKey": "testimonials.items.4.quote",
+      "nameKey": "testimonials.items.4.name",
+      "titleKey": "testimonials.items.4.title"
     },
     {
-      "quote": "I'm pretty sure they can speak binary. The way they optimize code is just... otherworldly!",
-      "name": "Alex Rivera",
-      "title": "Tech Lead at BinaryBusters"
+      "id": "5",
+      "quoteKey": "testimonials.items.5.quote",
+      "nameKey": "testimonials.items.5.name",
+      "titleKey": "testimonials.items.5.title"
     }
   ]
 } 

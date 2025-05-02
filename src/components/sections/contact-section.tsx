@@ -4,8 +4,11 @@ import { Card } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { BackgroundGradientAnimation } from "../ui/background-gradient-animation";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function ContactSection() {
+  const t = useTranslations("HomePage");
+
   return (
     <section id="contact">
       <div className="grid gap-4 md:grid-cols-5">
@@ -17,14 +20,14 @@ export default function ContactSection() {
                 variant="outline"
                 className="rounded-full px-4 py-1 text-sm md:text-md font-normal text-white"
               >
-                Contact me - LinkedIn only
+                {t("contact.badge")}
               </Badge>
               <div className="space-y-2 md:space-y-4 items-start w-full mt-2 md:mt-5">
                 <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[4rem] font-normal leading-tight tracking-tight text-white">
-                  Let&apos;s talk
+                  {t("contact.title")}
                 </h1>
                 <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-[4rem] font-normal leading-tight tracking-tight text-white/70">
-                  I&apos;m always looking for new opportunities
+                  {t("contact.subtitle")}
                 </h2>
               </div>
             </CardContent>
