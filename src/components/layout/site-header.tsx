@@ -145,17 +145,17 @@ export function SiteHeader() {
             <AnimatePresence>
               {locales.map(
                 (l) =>
-                  activeLocale === l &&
+                  activeLocale === l.locale &&
                   !isChangingEnd && (
                     <motion.span
-                      key={l}
-                      initial={{ y: locale === l ? 0 : -40, opacity: 0 }}
+                      key={l.locale}
+                      initial={{ y: locale === l.locale ? 0 : -80, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
-                      exit={{ y: 40, opacity: 0 }}
+                      exit={{ y: locale === l.locale ? 80 : 0, opacity: 0 }}
                       transition={{ duration: 0.7 }}
-                      className=" fixed w-full h-full flex items-center justify-center text-white text-4xl"
+                      className=" fixed w-full h-full flex items-center justify-center text-white text-2xl"
                     >
-                      {l}
+                      {l.message}
                     </motion.span>
                   )
               )}
