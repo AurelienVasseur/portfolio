@@ -10,7 +10,7 @@ import ContactSection from "@/components/sections/contact-section";
 import TestimonialsSection from "@/components/sections/testimonials-section";
 import MenuSection from "@/components/sections/menu-section";
 import { useEffect, useRef } from "react";
-import { useInView } from "framer-motion";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 
 export default function Home() {
   const locked = useRef(false);
@@ -120,13 +120,19 @@ export default function Home() {
         className="flex-1 hide-scrollbar"
         style={{ background: "oklch(0.145 0 0)" }}
       >
-        <div
-          ref={heroRef}
-          id="hero"
-          className="dark bg-background text-foreground flex justify-center items-center h-screen relative"
-        >
-          <HeroSection />
-        </div>
+        <AnimatePresence>
+          <motion.div
+            ref={heroRef}
+            id="hero"
+            key="hero"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.7, delay: 0.5 }}
+            className="dark bg-background text-foreground flex justify-center items-center h-screen relative"
+          >
+            <HeroSection />
+          </motion.div>
+        </AnimatePresence>
         <div
           id="menu"
           ref={menuRef}
@@ -141,10 +147,9 @@ export default function Home() {
         >
           {/* <div className="h-screen w-full bg-red-500 relative z-5">
           </div> */}
-          
-          <SiteHeader /> 
-          <div className=" flex flex-col px-8 pt-10 space-y-24 md:space-y-32 mx-auto max-w-5xl hide-scrollbar">
 
+          <SiteHeader />
+          <div className=" flex flex-col px-8 pt-10 space-y-24 md:space-y-32 mx-auto max-w-5xl hide-scrollbar">
             <AboutMe />
             <ExperiencesSection />
             <ProjectsSection />
