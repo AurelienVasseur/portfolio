@@ -2,42 +2,42 @@
   "projects": [
     {
       "id": 1,
-      "name": "Nom du projet",
+      "name": "projects.names.project1",
       "githubUrl": "https://github.com/username/project",
       "websiteUrl": "https://project-website.com",
       "imageFiles": ["aurelien.jpg", "aurelien.jpg", "aurelien.jpg"],
-      "description": "Description détaillée du projet",
+      "description": "projects.descriptions.project1",
       "size": "normal",
       "technologies": ["React", "TypeScript", "Next.js", "TailwindCSS"],
       "workInProgress": true
     },
     {
       "id": 2,
-      "name": "Another project",
+      "name": "projects.names.project2",
       "githubUrl": "https://github.com/username/project",
       "websiteUrl": "https://project-website.com",
       "imageFiles": ["aurelien.jpg", "aurelien.jpg", "aurelien.jpg"],
-      "description": "Description détaillée du projet",
+      "description": "projects.descriptions.project2",
       "size": "large",
       "technologies": ["Vue.js", "JavaScript", "Node.js", "Express"]
     },
     {
       "id": 3,
-      "name": "My third project",
+      "name": "projects.names.project3",
       "githubUrl": "https://github.com/username/project",
       "websiteUrl": "https://project-website.com",
       "imageFiles": ["aurelien.jpg", "aurelien.jpg", "aurelien.jpg"],
-      "description": "Description détaillée du projet",
+      "description": "projects.descriptions.project3",
       "size": "large",
       "technologies": ["Angular", "TypeScript", "Firebase", "Material UI"]
     },
     {
       "id": 4,
-      "name": "Nom du projet",
+      "name": "projects.names.project4",
       "githubUrl": "https://github.com/username/project",
       "websiteUrl": "https://project-website.com",
       "imageFiles": ["aurelien.jpg", "aurelien.jpg", "aurelien.jpg"],
-      "description": "Description détaillée du projet",
+      "description": "projects.descriptions.project4",
       "size": "normal",
       "technologies": ["Svelte", "JavaScript", "D3.js", "CSS"]
     }

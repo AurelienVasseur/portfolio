@@ -50,6 +50,9 @@
         "client": "Client Project",
         "internship": "Internship"
       },
+      "positions": {
+        "fullStack": "Full Stack Developer"
+      },
       "locations": {
         "paris": "Paris, France",
         "belfort": "Belfort, France"
@@ -60,6 +63,28 @@
         "aquantic": "Description of client project and achievements",
         "flowbird": "Description of client project and achievements",
         "resumify": "Creation of a website for online CV creation"
+      }
+    },
+    "projects": {
+      "title": "Build. Build. Build.",
+      "names": {
+        "project1": "Project Name",
+        "project2": "Another Project",
+        "project3": "My Third Project",
+        "project4": "Project Name"
+      },
+      "descriptions": {
+        "project1": "Detailed project description",
+        "project2": "Detailed project description",
+        "project3": "Detailed project description",
+        "project4": "Detailed project description"
+      },
+      "status": {
+        "workInProgress": "Work in Progress"
+      },
+      "card": {
+        "github": "GitHub",
+        "explore": "Explore"
       }
     }
   }

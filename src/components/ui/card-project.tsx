@@ -7,6 +7,7 @@ import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { EmblaCarouselType } from "embla-carousel";
 import { ProgressBar } from "./progress-bar";
+import { useTranslations } from "next-intl";
 
 import Autoplay from "embla-carousel-autoplay";
 import { IconBrandGithub, IconRocket } from "@tabler/icons-react";
@@ -37,6 +38,7 @@ export function CardProject({ project, isExpanded = false }: CardProjectProps) {
     },
     [Autoplay({ playOnInit: true, delay: 3000 })]
   );
+  const t = useTranslations("HomePage");
 
   const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -88,7 +90,7 @@ export function CardProject({ project, isExpanded = false }: CardProjectProps) {
             </span>
             {project.workInProgress && (
               <span className="px-4 py-1 rounded-full bg-orange-500/30 text-orange-400 text-xs font-semibold border border-orange-500/20">
-                🚧 Work in progress
+                🚧 {t("projects.status.workInProgress")}
               </span>
             )}
           </motion.div>
@@ -127,13 +129,13 @@ export function CardProject({ project, isExpanded = false }: CardProjectProps) {
             <Link href={project.githubUrl}>
               <span className="px-2 py-0.5 rounded-full bg-primary/30 text-primary text-xs border border-primary/20 hover:bg-primary/40 transition-colors cursor-pointer flex items-center gap-1">
                 <IconBrandGithub className="h-3 w-3" />
-                GitHub
+                {t("projects.card.github")}
               </span>
             </Link>
             <Link href={project.websiteUrl}>
               <span className="px-2 py-0.5 rounded-full bg-blue-500/30 text-blue-500 text-xs border border-blue-500/20 hover:bg-blue-500/40 transition-colors cursor-pointer flex items-center gap-1">
                 <IconRocket className="h-3 w-3" />
-                Explore
+                {t("projects.card.explore")}
               </span>
             </Link>
           </div>

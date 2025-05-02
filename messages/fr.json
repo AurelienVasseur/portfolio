@@ -64,6 +64,28 @@
         "flowbird": "Description du projet client et des réalisations",
         "resumify": "Création d'un site web pour la création de CV en ligne"
       }
+    },
+    "projects": {
+      "title": "Créer. Créer. Créer.",
+      "names": {
+        "project1": "Nom du projet",
+        "project2": "Un autre projet",
+        "project3": "Mon troisième projet",
+        "project4": "Nom du projet"
+      },
+      "descriptions": {
+        "project1": "Description détaillée du projet",
+        "project2": "Description détaillée du projet",
+        "project3": "Description détaillée du projet",
+        "project4": "Description détaillée du projet"
+      },
+      "status": {
+        "workInProgress": "En cours de développement"
+      },
+      "card": {
+        "github": "GitHub",
+        "explore": "Explorer"
+      }
     }
   }
 }

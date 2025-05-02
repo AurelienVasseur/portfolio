@@ -3,6 +3,7 @@
 import { LayoutCards, BaseItem } from "@/components/ui/layout-cards";
 import { CardProject } from "@/components/ui/card-project";
 import projectsData from "@/data/projects.json";
+import { useTranslations } from "next-intl";
 
 interface Project extends BaseItem {
   id: number;
@@ -12,6 +13,8 @@ interface Project extends BaseItem {
   githubUrl: string;
   websiteUrl: string;
   size: "normal" | "large";
+  technologies: string[];
+  workInProgress?: boolean;
 }
 
 type ProjectData = {
@@ -22,6 +25,8 @@ type ProjectData = {
   githubUrl: unknown;
   websiteUrl: unknown;
   size: unknown;
+  technologies: unknown;
+  workInProgress?: unknown;
 };
 
 function isProject(item: unknown): item is Project {
@@ -35,16 +40,22 @@ function isProject(item: unknown): item is Project {
     Array.isArray(project.imageFiles) &&
     typeof project.githubUrl === "string" &&
     typeof project.websiteUrl === "string" &&
-    (project.size === "normal" || project.size === "large")
+    (project.size === "normal" || project.size === "large") &&
+    Array.isArray(project.technologies)
   );
 }
 
 export function ProjectsSection() {
-  const projects = projectsData.projects.filter(isProject);
+  const t = useTranslations("HomePage");
+  const projects = projectsData.projects.filter(isProject).map(project => ({
+    ...project,
+    name: t(project.name),
+    description: t(project.description)
+  }));
 
   return (
     <section id="projects">
-      <h2 className="text-3xl font-bold mb-8">Build. Build. Build.</h2>
+      <h2 className="text-3xl font-bold mb-8">{t("projects.title")}</h2>
 
       <LayoutCards<Project>
         items={projects}
