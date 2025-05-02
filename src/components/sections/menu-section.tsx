@@ -5,7 +5,6 @@ import { FloatingDock } from "../ui/floating-dock";
 import {
   IconHome,
   IconTerminal2,
-  IconNewSection,
   IconExchange,
   IconBrandGithub,
   IconBrandLinkedin,
@@ -15,13 +14,15 @@ import {
   IconArrowForward,
 } from "@tabler/icons-react";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
+import { useTranslations } from "next-intl";
 
 export default function MenuSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const t = useTranslations("HomePage");
 
   const links = [
     {
-      title: "Learn more about me",
+      title: t("menu.learnMore"),
       icon: (
         <Avatar className="size-11">
           <AvatarImage src="/aurelien.jpg" />
@@ -32,14 +33,14 @@ export default function MenuSection() {
       scrollBlock: "start",
     },
     {
-      title: "Home",
+      title: t("menu.home"),
       icon: (
         <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       scrollToTop: true,
     },
     {
-      title: "Experiences",
+      title: t("menu.experiences"),
       icon: (
         <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
@@ -47,7 +48,7 @@ export default function MenuSection() {
       scrollBlock: "center",
     },
     {
-      title: "Projects",
+      title: t("menu.projects"),
       icon: (
         <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
@@ -62,21 +63,21 @@ export default function MenuSection() {
       href: "#",
     },*/
     {
-      title: "GitHub",
+      title: t("menu.github"),
       icon: (
         <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "https://github.com/AurelienVasseur",
     },
     {
-      title: "LinkedIn",
+      title: t("menu.linkedin"),
       icon: (
         <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "https://www.linkedin.com/in/aurelien-vasseur/",
     },
     {
-      title: "Contact",
+      title: t("menu.contact"),
       icon: (
         <IconMessage className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
@@ -107,25 +108,25 @@ export default function MenuSection() {
       <div className="flex items-center gap-4 text-xs text-neutral-400 dark:text-neutral-500">
         <div className="flex items-center gap-1">
           <IconArrowBack className="h-3 w-3" />
-          <span>Press</span>
+          <span>{t("menu.keyboard.press")}</span>
           <kbd className="flex items-center gap-1 rounded border border-neutral-200 bg-neutral-100 px-1.5 py-0.5 dark:border-neutral-700 dark:bg-neutral-800">
             <IconKeyboard className="h-3 w-3" />
             <span>Esc</span>
           </kbd>
-          <span>to close</span>
+          <span>{t("menu.keyboard.toClose")}</span>
         </div>
         <div className="flex items-center gap-1">
-          <span>Press</span>
+          <span>{t("menu.keyboard.press")}</span>
           <kbd className="flex items-center gap-1 rounded border border-neutral-200 bg-neutral-100 px-1.5 py-0.5 dark:border-neutral-700 dark:bg-neutral-800">
             <IconKeyboard className="h-3 w-3" />
             <span>Enter</span>
           </kbd>
-          <span>or</span>
+          <span>{t("menu.keyboard.or")}</span>
           <kbd className="flex items-center gap-1 rounded border border-neutral-200 bg-neutral-100 px-1.5 py-0.5 dark:border-neutral-700 dark:bg-neutral-800">
             <IconKeyboard className="h-3 w-3" />
             <span>Space</span>
           </kbd>
-          <span>to continue</span>
+          <span>{t("menu.keyboard.toContinue")}</span>
           <IconArrowForward className="h-3 w-3" />
         </div>
       </div>

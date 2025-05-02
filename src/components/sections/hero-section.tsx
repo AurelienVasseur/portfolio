@@ -22,7 +22,6 @@ export function HeroSection() {
   const scale = useTransform(scrollY, [0, 300], [1, 0.8]);
   const t = useTranslations("HomePage");
 
-
   return (
     <section
       id="hero"
@@ -48,8 +47,7 @@ export function HeroSection() {
             <AvatarImage src="/aurelien.jpg" />
             <AvatarFallback>AV</AvatarFallback>
           </Avatar>
-          <span className="font-normal">Hi, I&apos;m Aurélien</span>
-          <p>Title : {t("title")}</p>
+          <span className="font-normal">{t("hero.greeting")}</span>
         </Link>
         <div className="grid gap-4 md:grid-cols-5">
           <Card className="col-span-5 bg-muted/50 py-0">
@@ -63,10 +61,10 @@ export function HeroSection() {
                 </Badge>
                 <div className="space-y-2 md:space-y-4 items-start w-full mt-2 md:mt-5">
                   <h1 className="text-2xl md:text-5xl lg:text-[4rem] font-normal leading-tight tracking-tight">
-                    Entrepreneur
+                    {t("hero.title")}
                   </h1>
                   <h2 className="text-2xl md:text-5xl lg:text-[4rem] font-normal leading-tight tracking-tight text-muted-foreground">
-                    Passionate engineer
+                    {t("hero.subtitle")}
                   </h2>
                 </div>
               </CardContent>
@@ -83,7 +81,7 @@ export function HeroSection() {
             <FireEffect />
             <CardContent className="flex items-center justify-between p-0 relative z-10">
               <p className="text-base md:text-lg font-normal">
-                {projectsData.projects.length} projects released
+                {t("hero.projectsCount", { count: projectsData.projects.length })}
               </p>
             </CardContent>
           </Card>
@@ -140,7 +138,7 @@ export function HeroSection() {
           className="flex md:hidden flex-col items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity mt-8 animate-bounce"
         >
           <span className="text-sm text-muted-foreground">
-            Scroll to explore
+            {t("hero.scrollToExplore")}
           </span>
           <div className="w-8 h-8 rounded-full border-2 border-muted-foreground flex items-center justify-center">
             <svg

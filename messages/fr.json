@@ -1,6 +1,28 @@
 {
   "HomePage": {
-    "title": "Bonjour le monde!",
-    "about": "Aller à la page à propos"
+    "about": "Aller à la page à propos",
+    "hero": {
+      "greeting": "Salut, je suis Aurélien",
+      "title": "Entrepreneur",
+      "subtitle": "Ingénieur passionné",
+      "projectsCount": "{count} projets publiés",
+      "scrollToExplore": "Défiler pour explorer"
+    },
+    "menu": {
+      "learnMore": "En savoir plus sur moi",
+      "home": "Accueil",
+      "experiences": "Expériences",
+      "projects": "Projets",
+      "challenge": "Challenge #OneMonthOneProject",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "contact": "Contact",
+      "keyboard": {
+        "press": "Appuyez sur",
+        "toClose": "pour fermer",
+        "toContinue": "pour continuer",
+        "or": "ou"
+      }
+    }
   }
 }

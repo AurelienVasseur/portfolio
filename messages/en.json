@@ -1,6 +1,28 @@
 {
   "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
+    "about": "Go to the about page",
+    "hero": {
+      "greeting": "Hi, I'm Aurélien",
+      "title": "Entrepreneur",
+      "subtitle": "Passionate engineer",
+      "projectsCount": "{count} projects released",
+      "scrollToExplore": "Scroll to explore"
+    },
+    "menu": {
+      "learnMore": "Learn more about me",
+      "home": "Home",
+      "experiences": "Experiences",
+      "projects": "Projects",
+      "challenge": "#OneMonthOneProject challenge",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "contact": "Contact",
+      "keyboard": {
+        "press": "Press",
+        "toClose": "to close",
+        "toContinue": "to continue",
+        "or": "or"
+      }
+    }
   }
 }
