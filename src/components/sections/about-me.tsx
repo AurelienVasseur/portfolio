@@ -24,6 +24,12 @@ export default function AboutMe() {
     return () => window.removeEventListener("keydown", handleEscape);
   }, [isModalOpen]);
 
+  const translatedSections = aboutData.sections.map((section) => ({
+    ...section,
+    title: t(section.titleKey),
+    description: t(section.descriptionKey)
+  }));
+
   return (
     <>
       <section id="about" className="flex justify-center items-center">
@@ -57,7 +63,7 @@ export default function AboutMe() {
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
         <div className="flex justify-center items-center h-screen w-full bg-neutral-900">
           <div className="w-full max-w-4xl mx-auto">
-            <StickyScroll content={aboutData.sections} />
+            <StickyScroll content={translatedSections} />
           </div>
         </div>
       </Modal>

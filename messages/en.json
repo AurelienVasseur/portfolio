@@ -36,7 +36,25 @@
     "about": {
       "badge": "About Me",
       "title": "Know more about me",
-      "subtitle": "Discover my journey"
+      "subtitle": "Discover my journey",
+      "sections": {
+        "whoAmI": {
+          "title": "Who am I?",
+          "description": "I am a developer passionate about creating modern and performant web applications. My expertise covers the entire web stack, from front-end to back-end."
+        },
+        "skills": {
+          "title": "My skills",
+          "description": "React, TypeScript, Node.js, Python, and much more. I constantly strive to learn new technologies to stay at the forefront of innovation."
+        },
+        "approach": {
+          "title": "My approach",
+          "description": "I favor a user-centered approach, creating intuitive interfaces and exceptional user experiences."
+        },
+        "projects": {
+          "title": "My projects",
+          "description": "I have worked on various projects, from web applications to enterprise solutions, focusing on code quality and performance."
+        }
+      }
     },
     "experiences": {
       "title": "They trust me",
