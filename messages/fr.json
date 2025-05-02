@@ -166,5 +166,9 @@
       "heroku": "Heroku",
       "andMore": "Et plus encore..."
     }
+  },
+  "Metadata": {
+    "title": "Salut, je suis Aurélien",
+    "description": "Entrepreneur. Ingénieur passionné."
   }
 }
