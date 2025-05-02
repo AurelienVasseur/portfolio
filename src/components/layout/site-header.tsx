@@ -7,23 +7,16 @@ import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar";
 import { ThemeToggle } from "../ui/theme-toggle";
 import { AnimatePresence, motion } from "framer-motion";
 import { locales, LocaleSwitcher } from "../ui/locale-switcher";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 import { usePathname, useRouter } from "@/i18n/navigation";
-
-const sectionTitles: Record<string, string> = {
-  hero: "Hi, I'm Aurélien",
-  about: "About Me",
-  experiences: "My Experiences",
-  projects: "My Projects",
-  contact: "Get in Touch",
-};
 
 export function SiteHeader() {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
   const params = useParams();
+  const t = useTranslations("HomePage");
 
   const [activeSection, setActiveSection] = useState("hero");
   const [isLocaleChanging, setIsLocaleChanging] = useState(false);
@@ -31,7 +24,7 @@ export function SiteHeader() {
   const [activeLocale, setActiveLocale] = useState(locale);
 
   useEffect(() => {
-    const sections = Object.keys(sectionTitles)
+    const sections = ["hero", "about", "experiences", "projects", "contact"]
       .map((id) => document.getElementById(id))
       .filter((el): el is HTMLElement => el !== null);
 
@@ -113,7 +106,7 @@ export function SiteHeader() {
                             transition={{ duration: 0.4 }}
                             className="absolute inset-0 flex items-center font-normal"
                           >
-                            {sectionTitles[activeSection]}
+                            {t(`header.sections.${activeSection}`)}
                           </motion.span>
                         </AnimatePresence>
                       </div>

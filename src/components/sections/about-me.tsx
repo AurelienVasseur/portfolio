@@ -7,9 +7,11 @@ import aboutData from "@/data/about.json";
 import { Card, CardContent } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { BackgroundParticlesAnimation } from "../ui/background-particles-animation";
+import { useTranslations } from "next-intl";
 
 export default function AboutMe() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const t = useTranslations("HomePage");
 
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
@@ -37,14 +39,14 @@ export default function AboutMe() {
                 variant="outline"
                 className="rounded-full px-4 py-1 text-sm md:text-md font-normal text-white"
               >
-                About Me
+                {t("about.badge")}
               </Badge>
               <div className="space-y-2 md:space-y-4 items-start w-full mt-2 md:mt-5">
                 <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[4rem] font-normal leading-tight tracking-tight text-white">
-                  Know more about me
+                  {t("about.title")}
                 </h1>
                 <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-[4rem] font-normal leading-tight tracking-tight text-white/70">
-                  Discover my journey
+                  {t("about.subtitle")}
                 </h2>
               </div>
             </CardContent>

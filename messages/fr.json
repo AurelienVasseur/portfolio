@@ -23,6 +23,20 @@
         "toContinue": "pour continuer",
         "or": "ou"
       }
+    },
+    "header": {
+      "sections": {
+        "hero": "Salut",
+        "about": "À propos",
+        "experiences": "Mes expériences",
+        "projects": "Mes projets",
+        "contact": "Me contacter"
+      }
+    },
+    "about": {
+      "badge": "À propos",
+      "title": "En savoir plus sur moi",
+      "subtitle": "Découvrez mon parcours"
     }
   }
 }
