@@ -11,7 +11,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 import { usePathname, useRouter } from "@/i18n/navigation";
 
-export function SiteHeader() {
+export function Header() {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();

@@ -2,7 +2,7 @@
 
 import { HeroSection } from "@/components/sections/hero-section";
 import { ProjectsSection } from "@/components/sections/projects-section";
-import { SiteHeader } from "@/components/layout/site-header";
+import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ExperiencesSection } from "@/components/sections/experiences-section";
 import AboutMe from "@/components/sections/about-me";
@@ -146,7 +146,7 @@ export default function Home() {
           ref={contentRef}
           className="bg-background relative overflow-y-auto h-[100vh] z-20 shadow-2xl"
         >
-          <SiteHeader />
+          <Header />
           <div id="contentStart" className="h-24 w-full bg-background" />
           <div className="flex flex-col px-8 pt-10 space-y-24 md:space-y-32 mx-auto max-w-5xl">
             <AboutMe />
