@@ -141,8 +141,9 @@ export default function Home() {
         >
           {/* <div className="h-screen w-full bg-red-500 relative z-5">
           </div> */}
+          
+          <SiteHeader /> 
           <div className=" flex flex-col px-8 pt-10 space-y-24 md:space-y-32 mx-auto max-w-5xl hide-scrollbar">
-            <SiteHeader />
 
             <AboutMe />
             <ExperiencesSection />
