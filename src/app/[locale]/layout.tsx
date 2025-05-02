@@ -31,7 +31,7 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <NextIntlClientProvider>
-        <body className="min-h-screen bg-background font-mono antialiased hide-scrollbar overflow-hidden">
+        <body className="min-h-screen bg-background font-mono antialiased hide-scrollbar">
           <ThemeProvider
             attribute="class"
             defaultTheme="system"

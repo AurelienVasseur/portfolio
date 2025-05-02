@@ -30,7 +30,7 @@ export default function Home() {
       el.scrollIntoView({ behavior: "smooth", block });
       setTimeout(() => {
         locked.current = false;
-      }, 1000);
+      }, 500);
     }
   };
 
@@ -40,17 +40,8 @@ export default function Home() {
     window.scrollTo({ top: 0, behavior: "smooth" });
     setTimeout(() => {
       locked.current = false;
-    }, 1000);
+    }, 500);
   };
-
-  // Blocage/déblocage du scroll
-  /*useEffect(() => {
-    if (contentInView) {
-      document.body.style.overflow = "auto";
-    } else {
-      document.body.style.overflow = "hidden";
-    }
-  }, [heroInView, menuInView, contentInView]);*/
 
   // Toute action dans hero => scroll vers menu
   useEffect(() => {
@@ -72,21 +63,33 @@ export default function Home() {
     };
   }, [heroInView]);
 
-  // ESCAPE dans menu => retour au hero
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
       if (locked.current || !menuInView) return;
       if (e.key === "Escape") {
+        // ESCAPE dans menu => retour au hero
         e.preventDefault();
         scrollToTop();
       }
       if (e.key === " " || e.key === "Enter") {
+        // Enter and space => scroll vers le début du contenu
         e.preventDefault(); // empêche le scroll de la page avec space
-        scrollTo("content", "start");
+        scrollTo("contentStart", "start");
       }
     };
     window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
+
+    const onScroll = (e: WheelEvent) => {
+      if (locked.current || !menuInView) return;
+      // Scroll disabled
+      e.preventDefault();
+    };
+    window.addEventListener("wheel", onScroll, { passive: false });
+
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+      window.removeEventListener("wheel", onScroll);
+    };
   }, [menuInView]);
 
   // Si on est tout en haut de content → scroll vers menu
@@ -113,11 +116,9 @@ export default function Home() {
   }, [contentInView]);
 
   return (
-    <div className="relative flex min-h-screen flex-col hide-scrollbar">
-      {/* <SiteHeader /> */}
-      {/* <DotBackground /> */}
+    <div className="relative flex min-h-screen flex-col overflow-hidden">
       <main
-        className="flex-1 hide-scrollbar"
+        className="flex-1 overflow-hidden"
         style={{ background: "oklch(0.145 0 0)" }}
       >
         <AnimatePresence>
@@ -136,20 +137,18 @@ export default function Home() {
         <div
           id="menu"
           ref={menuRef}
-          className="z-10 h-[120vh] w-full bg-green-50 backdrop-blur supports-[backdrop-filter]:bg-background/10 rounded-t-4xl flex justify-center items-center"
+          className="z-10 h-[120vh] w-full transition-all duration-5000 backdrop-blur supports-[backdrop-filter]:bg-background/10 flex justify-center items-center rounded-t-4xl"
         >
           <MenuSection />
         </div>
         <div
           id="content"
           ref={contentRef}
-          className="bg-background relative overflow-y-auto hide-scrollbar h-[100vh] z-20  shadow-2xl"
+          className="bg-background relative overflow-y-auto h-[100vh] z-20 shadow-2xl"
         >
-          {/* <div className="h-screen w-full bg-red-500 relative z-5">
-          </div> */}
-
           <SiteHeader />
-          <div className=" flex flex-col px-8 pt-10 space-y-24 md:space-y-32 mx-auto max-w-5xl hide-scrollbar">
+          <div id="contentStart" className="h-24 w-full bg-background" />
+          <div className="flex flex-col px-8 pt-10 space-y-24 md:space-y-32 mx-auto max-w-5xl">
             <AboutMe />
             <ExperiencesSection />
             <ProjectsSection />
@@ -159,9 +158,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <div className="fixed bottom-0 right-0 h-10 bg-red-500 z-500">
-        {/* <p>test: {section}</p> */}
-      </div>
     </div>
   );
 }
