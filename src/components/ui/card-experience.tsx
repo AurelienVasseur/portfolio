@@ -97,21 +97,21 @@ export default function CardExperience({
             isClicked ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
           }`}
         >
-          <h3 className="text-2xl font-bold mb-2">{experience.position}</h3>
+          <h3 className="text-2xl font-bold mb-2">{t(experience.position)}</h3>
           <h4 className="text-xl mb-4">{experience.company}</h4>
           <p className="text-sm mb-2">
             {experience.startDate} -{" "}
             {experience.current ? "Present" : experience.endDate}
           </p>
-          <p className="text-sm mb-4">{experience.location}</p>
-          <p className="text-sm mb-4">{experience.description}</p>
+          <p className="text-sm mb-4">{t(experience.location)}</p>
+          <p className="text-sm mb-4">{t(experience.description)}</p>
           <div className="flex flex-wrap gap-2">
             {experience.technologies.map((tech, index) => (
               <span
                 key={index}
                 className="px-3 py-1 rounded-full bg-white/10 text-white text-xs font-semibold backdrop-blur-sm border border-white/20"
               >
-                {tech}
+                {t(tech)}
               </span>
             ))}
           </div>

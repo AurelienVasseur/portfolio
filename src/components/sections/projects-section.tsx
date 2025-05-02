@@ -47,11 +47,7 @@ function isProject(item: unknown): item is Project {
 
 export function ProjectsSection() {
   const t = useTranslations("HomePage");
-  const projects = projectsData.projects.filter(isProject).map(project => ({
-    ...project,
-    name: t(project.name),
-    description: t(project.description)
-  }));
+  const projects = projectsData.projects.filter(isProject);
 
   return (
     <section id="projects">

@@ -141,6 +141,30 @@
     },
     "footer": {
       "text": "Si tu aimes les palmiers et les lamas, on sera amis"
+    },
+    "technologies": {
+      "react": "React",
+      "vue": "Vue.js",
+      "angular": "Angular",
+      "svelte": "Svelte",
+      "typescript": "TypeScript",
+      "javascript": "JavaScript",
+      "nextjs": "Next.js",
+      "tailwind": "TailwindCSS",
+      "materialui": "Material UI",
+      "d3": "D3.js",
+      "css": "CSS",
+      "nodejs": "Node.js",
+      "python": "Python",
+      "express": "Express",
+      "firebase": "Firebase",
+      "postgresql": "PostgreSQL",
+      "shadcnui": "Shadcn/ui",
+      "supabase": "Supabase",
+      "mongodb": "MongoDB",
+      "vercel": "Vercel",
+      "heroku": "Heroku",
+      "andMore": "Et plus encore..."
     }
   }
 }

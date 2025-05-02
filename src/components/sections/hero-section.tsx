@@ -81,7 +81,9 @@ export function HeroSection() {
             <FireEffect />
             <CardContent className="flex items-center justify-between p-0 relative z-10">
               <p className="text-base md:text-lg font-normal">
-                {t("hero.projectsCount", { count: projectsData.projects.length })}
+                {t("hero.projectsCount", {
+                  count: projectsData.projects.length,
+                })}
               </p>
             </CardContent>
           </Card>
@@ -91,27 +93,55 @@ export function HeroSection() {
               <TooltipProvider>
                 {[
                   {
-                    name: "JavaScript",
+                    name: t("technologies.javascript"),
                     image: "/javascript.png",
                     fallback: "JS",
                   },
                   {
-                    name: "TypeScript",
+                    name: t("technologies.typescript"),
                     image: "/typescript.png",
                     fallback: "TS",
                   },
-                  { name: "Next.js", image: "/nextjs.png", fallback: "NX" },
-                  { name: "Shadcn/ui", image: "/shadcnui.png", fallback: "SH" },
-                  { name: "Supabase", image: "/supabase.png", fallback: "SB" },
-                  { name: "MongoDB", image: "/mongodb.png", fallback: "MO" },
                   {
-                    name: "Tailwind CSS",
+                    name: t("technologies.nextjs"),
+                    image: "/nextjs.png",
+                    fallback: "NX",
+                  },
+                  {
+                    name: t("technologies.shadcnui"),
+                    image: "/shadcnui.png",
+                    fallback: "SH",
+                  },
+                  {
+                    name: t("technologies.supabase"),
+                    image: "/supabase.png",
+                    fallback: "SB",
+                  },
+                  {
+                    name: t("technologies.mongodb"),
+                    image: "/mongodb.png",
+                    fallback: "MO",
+                  },
+                  {
+                    name: t("technologies.tailwind"),
                     image: "/tailwindcss.png",
                     fallback: "TC",
                   },
-                  { name: "Vercel", image: "/vercel.svg", fallback: "VC" },
-                  { name: "Heroku", image: "/heroku.png", fallback: "HK" },
-                  { name: "And more...", image: "", fallback: <Ellipsis /> },
+                  {
+                    name: t("technologies.vercel"),
+                    image: "/vercel.svg",
+                    fallback: "VC",
+                  },
+                  {
+                    name: t("technologies.heroku"),
+                    image: "/heroku.png",
+                    fallback: "HK",
+                  },
+                  {
+                    name: t("technologies.andMore"),
+                    image: "",
+                    fallback: <Ellipsis />,
+                  },
                 ].map((e) => (
                   <Tooltip key={e.name}>
                     <TooltipTrigger>

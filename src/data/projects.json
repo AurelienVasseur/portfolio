@@ -8,7 +8,12 @@
       "imageFiles": ["aurelien.jpg", "aurelien.jpg", "aurelien.jpg"],
       "description": "projects.descriptions.project1",
       "size": "normal",
-      "technologies": ["React", "TypeScript", "Next.js", "TailwindCSS"],
+      "technologies": [
+        "technologies.react",
+        "technologies.typescript",
+        "technologies.nextjs",
+        "technologies.tailwind"
+      ],
       "workInProgress": true
     },
     {
@@ -19,7 +24,12 @@
       "imageFiles": ["aurelien.jpg", "aurelien.jpg", "aurelien.jpg"],
       "description": "projects.descriptions.project2",
       "size": "large",
-      "technologies": ["Vue.js", "JavaScript", "Node.js", "Express"]
+      "technologies": [
+        "technologies.vue",
+        "technologies.javascript",
+        "technologies.nodejs",
+        "technologies.express"
+      ]
     },
     {
       "id": 3,
@@ -29,7 +39,12 @@
       "imageFiles": ["aurelien.jpg", "aurelien.jpg", "aurelien.jpg"],
       "description": "projects.descriptions.project3",
       "size": "large",
-      "technologies": ["Angular", "TypeScript", "Firebase", "Material UI"]
+      "technologies": [
+        "technologies.angular",
+        "technologies.typescript",
+        "technologies.firebase",
+        "technologies.materialui"
+      ]
     },
     {
       "id": 4,
@@ -39,7 +54,12 @@
       "imageFiles": ["aurelien.jpg", "aurelien.jpg", "aurelien.jpg"],
       "description": "projects.descriptions.project4",
       "size": "normal",
-      "technologies": ["Svelte", "JavaScript", "D3.js", "CSS"]
+      "technologies": [
+        "technologies.svelte",
+        "technologies.javascript",
+        "technologies.d3",
+        "technologies.css"
+      ]
     }
   ]
-} 
+}

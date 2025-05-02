@@ -9,7 +9,11 @@
       "current": false,
       "location": "experiences.locations.paris",
       "description": "experiences.descriptions.isagri",
-      "technologies": ["Vue.js", "Python", "PostgreSQL"],
+      "technologies": [
+        "technologies.vue",
+        "technologies.python",
+        "technologies.postgresql"
+      ],
       "internship": true,
       "logoFile": "isagri.jpeg",
       "bigCompany": true,
@@ -24,7 +28,11 @@
       "current": false,
       "location": "experiences.locations.paris",
       "description": "experiences.descriptions.ringTwice",
-      "technologies": ["Vue.js", "Python", "PostgreSQL"],
+      "technologies": [
+        "technologies.vue",
+        "technologies.python",
+        "technologies.postgresql"
+      ],
       "internship": true,
       "logoFile": "ringtwice.jpeg",
       "startup": true,
@@ -39,7 +47,11 @@
       "current": false,
       "location": "experiences.locations.paris",
       "description": "experiences.descriptions.aquantic",
-      "technologies": ["Vue.js", "Python", "PostgreSQL"],
+      "technologies": [
+        "technologies.vue",
+        "technologies.python",
+        "technologies.postgresql"
+      ],
       "client": true,
       "logoFile": "aquantic.jpeg",
       "startup": true,
@@ -55,7 +67,11 @@
       "current": false,
       "location": "experiences.locations.paris",
       "description": "experiences.descriptions.flowbird",
-      "technologies": ["Vue.js", "Python", "PostgreSQL"],
+      "technologies": [
+        "technologies.vue",
+        "technologies.python",
+        "technologies.postgresql"
+      ],
       "client": true,
       "logoFile": "flowbird.png",
       "bigCompany": true,
@@ -70,11 +86,15 @@
       "current": true,
       "location": "experiences.locations.belfort",
       "description": "experiences.descriptions.resumify",
-      "technologies": ["React", "Node.js", "TypeScript"],
+      "technologies": [
+        "technologies.react",
+        "technologies.nodejs",
+        "technologies.typescript"
+      ],
       "client": true,
       "logoFile": "resumify.jpeg",
       "startup": true,
       "mainColor": "#0e1a23"
     }
   ]
-} 
+}

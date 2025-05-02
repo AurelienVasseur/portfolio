@@ -86,7 +86,7 @@ export function CardProject({ project, isExpanded = false }: CardProjectProps) {
             }}
           >
             <span className="px-4 py-1 rounded-full bg-white/30 text-white text-xs font-semibold  border border-white/20">
-              {project.name}
+              {t(project.name)}
             </span>
             {project.workInProgress && (
               <span className="px-4 py-1 rounded-full bg-orange-500/30 text-orange-400 text-xs font-semibold border border-orange-500/20">
@@ -110,7 +110,7 @@ export function CardProject({ project, isExpanded = false }: CardProjectProps) {
                   <div className="aspect-video w-full bg-muted rounded-lg overflow-hidden">
                     <img
                       src={`/images/${image}`}
-                      alt={project.name}
+                      alt={t(project.name)}
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -124,7 +124,7 @@ export function CardProject({ project, isExpanded = false }: CardProjectProps) {
           )}
         </div>
         <div className="flex flex-col md:flex-row gap-2 md:items-center md:align-middle">
-          <h2 className="text-xl font-semibold">{project.name}</h2>
+          <h2 className="text-xl font-semibold">{t(project.name)}</h2>
           <div className="flex flex-row gap-2 items-center align-middle">
             <Link href={project.githubUrl}>
               <span className="px-2 py-0.5 rounded-full bg-primary/30 text-primary text-xs border border-primary/20 hover:bg-primary/40 transition-colors cursor-pointer flex items-center gap-1">
@@ -140,14 +140,14 @@ export function CardProject({ project, isExpanded = false }: CardProjectProps) {
             </Link>
           </div>
         </div>
-        <p className="text-md leading-relaxed">{project.description}</p>
+        <p className="text-md leading-relaxed">{t(project.description)}</p>
         <div className="flex flex-wrap gap-2">
           {project.technologies.map((tech, index) => (
             <span
               key={index}
               className="px-2 py-0.5 rounded-full text-foreground text-xs backdrop-blur-sm border border-foreground/20"
             >
-              {tech}
+              {t(tech)}
             </span>
           ))}
         </div>
