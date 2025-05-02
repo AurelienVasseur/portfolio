@@ -37,6 +37,33 @@
       "badge": "À propos",
       "title": "En savoir plus sur moi",
       "subtitle": "Découvrez mon parcours"
+    },
+    "experiences": {
+      "title": "Ils me font confiance",
+      "current": "En cours",
+      "done": "Terminé",
+      "companyTypes": {
+        "startup": "Startup",
+        "bigCompany": "Grande entreprise"
+      },
+      "experienceTypes": {
+        "client": "Projet Client",
+        "internship": "Stage"
+      },
+      "positions": {
+        "fullStack": "Développeur Full Stack"
+      },
+      "locations": {
+        "paris": "Paris, France",
+        "belfort": "Belfort, France"
+      },
+      "descriptions": {
+        "isagri": "Description du projet client et des réalisations",
+        "ringTwice": "Description du projet client et des réalisations",
+        "aquantic": "Description du projet client et des réalisations",
+        "flowbird": "Description du projet client et des réalisations",
+        "resumify": "Création d'un site web pour la création de CV en ligne"
+      }
     }
   }
 }

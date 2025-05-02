@@ -37,6 +37,30 @@
       "badge": "About Me",
       "title": "Know more about me",
       "subtitle": "Discover my journey"
+    },
+    "experiences": {
+      "title": "They trust me",
+      "current": "Active",
+      "done": "Done",
+      "companyTypes": {
+        "startup": "Startup",
+        "bigCompany": "Big Company"
+      },
+      "experienceTypes": {
+        "client": "Client Project",
+        "internship": "Internship"
+      },
+      "locations": {
+        "paris": "Paris, France",
+        "belfort": "Belfort, France"
+      },
+      "descriptions": {
+        "isagri": "Description of client project and achievements",
+        "ringTwice": "Description of client project and achievements",
+        "aquantic": "Description of client project and achievements",
+        "flowbird": "Description of client project and achievements",
+        "resumify": "Creation of a website for online CV creation"
+      }
     }
   }
 }

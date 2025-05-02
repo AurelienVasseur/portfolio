@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { CheckCircle2 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export interface Experience {
   id: number;
@@ -24,14 +25,15 @@ export default function CardExperience({
 }: {
   experience: Experience;
 }) {
+  const t = useTranslations("HomePage");
   const [isClicked, setIsClicked] = useState(false);
 
   // Détermination du label principal
   let mainLabel = "";
-  if (experience.startup) mainLabel = "Startup";
-  else if (experience.bigCompany) mainLabel = "Big Company";
-  else if (experience.client) mainLabel = "Projet Client";
-  else if (experience.internship) mainLabel = "Internship";
+  if (experience.startup) mainLabel = t("experiences.companyTypes.startup");
+  else if (experience.bigCompany) mainLabel = t("experiences.companyTypes.bigCompany");
+  else if (experience.client) mainLabel = t("experiences.experienceTypes.client");
+  else if (experience.internship) mainLabel = t("experiences.experienceTypes.internship");
 
   // Couleur par défaut si non spécifiée
   const mainColor = experience.mainColor || "#1a1a1a";
@@ -63,12 +65,12 @@ export default function CardExperience({
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
             </span>
-            Active
+            {t("experiences.current")}
           </span>
         ) : (
           <span className="px-3 py-1 rounded-full bg-white/10 text-white text-xs font-semibold backdrop-blur-sm border border-white/20 flex items-center gap-1">
             <CheckCircle2 className="h-3.5 w-3.5" />
-            Done
+            {t("experiences.done")}
           </span>
         )}
       </div>

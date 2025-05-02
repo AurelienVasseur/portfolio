@@ -6,6 +6,7 @@ import CardExperience, { Experience } from "@/components/ui/card-experience";
 import useEmblaCarousel from 'embla-carousel-react';
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Autoplay from "embla-carousel-autoplay";
+import { useTranslations } from "next-intl";
 
 export function ExperiencesSection() {
   const [experiences, setExperiences] = useState<Experience[]>([]);
@@ -14,6 +15,7 @@ export function ExperiencesSection() {
     containScroll: 'trimSnaps'
   },
   [Autoplay({ playOnInit: true, delay: 3000 })]);
+  const t = useTranslations("HomePage");
 
   useEffect(() => {
     const allExperiences = experiencesData.experiences.reverse();
@@ -32,12 +34,20 @@ export function ExperiencesSection() {
   return (
     <section id="experiences">
       <div className="flex flex-col gap-8">
-        <h2 className="text-3xl font-bold mb-8">They trust me</h2>
+        <h2 className="text-3xl font-bold mb-8">{t("experiences.title")}</h2>
         <div className="relative">
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex gap-6">
               {experiences.map((experience) => (
-                  <CardExperience key={experience.id} experience={experience} />
+                <CardExperience 
+                  key={experience.id} 
+                  experience={{
+                    ...experience,
+                    position: t(experience.position),
+                    location: t(experience.location),
+                    description: t(experience.description)
+                  }} 
+                />
               ))}
             </div>
           </div>
