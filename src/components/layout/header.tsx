@@ -17,11 +17,22 @@ export function Header() {
   const pathname = usePathname();
   const params = useParams();
   const t = useTranslations("HomePage");
+  const tLocales = useTranslations("Locales");
 
   const [activeSection, setActiveSection] = useState("hero");
   const [isLocaleChanging, setIsLocaleChanging] = useState(false);
   const [isChangingEnd, setIsChangingEnd] = useState(false);
   const [activeLocale, setActiveLocale] = useState(locale);
+  const [isNewLocaleJapanese, setIsNewLocaleJapanese] = useState(false);
+  const [japaneseMessageIndex, setJapaneseMessageIndex] = useState(0);
+
+  const japaneseMessages = [
+    tLocales("Japanese.messages.didYouUnderstand"),
+    tLocales("Japanese.messages.notMe"),
+    tLocales("Japanese.messages.letsStayInEnglish"),
+  ];
+
+  const messageDuration = 2000;
 
   useEffect(() => {
     const sections = ["hero", "about", "experiences", "projects", "contact"]
@@ -46,28 +57,46 @@ export function Header() {
   }, [activeSection]);
 
   const handleLocaleChange = (newLocale: string) => {
-    console.log("newLocale", newLocale);
-
     setIsLocaleChanging(true);
     setTimeout(() => {
       setActiveLocale(newLocale);
-      //window.scrollTo({ top: 0, behavior: 'instant' });
-
-      //setIsChanging(false);
-      setTimeout(() => {
-        setIsChangingEnd(true);
+      if (newLocale === "ja") {
         setTimeout(() => {
-          router.replace(
-            // @ts-expect-error -- TypeScript will validate that only known `params`
-            // are used in combination with a given `pathname`. Since the two will
-            // always match for the current route, we can skip runtime checks.
-            // fixed top-0 left-0 bg-background h-screen w-screen -translate-y-5
-            { pathname, params },
-            { locale: newLocale }
-          );
-        }, 700);
-      }, 1500);
-    }, 1500);
+          setIsChangingEnd(true);
+          setIsNewLocaleJapanese(true);
+          japaneseMessages.forEach((message, index) => {
+            setTimeout(() => {
+              setJapaneseMessageIndex(index);
+            }, messageDuration * index);
+          });
+
+          setTimeout(() => {
+            setIsNewLocaleJapanese(false);
+            setActiveLocale(locale);
+            setTimeout(() => {
+              setIsLocaleChanging(false);
+              setTimeout(() => {
+                setIsChangingEnd(false);
+              }, 1000);
+            }, 1000);
+          }, messageDuration * japaneseMessages.length);
+        }, messageDuration);
+      } else {
+        setTimeout(() => {
+          setIsChangingEnd(true);
+          setTimeout(() => {
+            router.replace(
+              // @ts-expect-error -- TypeScript will validate that only known `params`
+              // are used in combination with a given `pathname`. Since the two will
+              // always match for the current route, we can skip runtime checks.
+              // fixed top-0 left-0 bg-background h-screen w-screen -translate-y-5
+              { pathname, params },
+              { locale: newLocale }
+            );
+          }, 700);
+        }, messageDuration);
+      }
+    }, messageDuration);
   };
 
   return (
@@ -144,10 +173,15 @@ export function Header() {
                       key={l.locale}
                       initial={{ y: locale === l.locale ? 0 : -80, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
-                      exit={{ y: locale === l.locale ? 80 : 0, opacity: 0 }}
+                      exit={{
+                        y:
+                          locale === l.locale || activeLocale === "ja" ? 80 : 0,
+                        opacity: 0,
+                      }}
                       transition={{
                         duration: 0.7,
-                        type: "spring",
+                        opacity: { type: "tween" },
+                        y: { type: "spring" },
                         stiffness: 100,
                         damping: 10,
                       }}
@@ -157,14 +191,24 @@ export function Header() {
                     </motion.span>
                   )
               )}
-              <motion.span
-                key="isChangingLocaleEnd"
-                initial={{ y: -40, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: 40, opacity: 0 }}
-                transition={{ duration: 0.7 }}
-                className=" fixed w-full h-full flex items-center justify-center"
-              ></motion.span>
+              {isNewLocaleJapanese && (
+                <motion.span
+                  key={japaneseMessageIndex}
+                  initial={{ y: -80, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: 80, opacity: 0 }}
+                  transition={{
+                    duration: 0.7,
+                    opacity: { type: "tween" },
+                    y: { type: "spring" },
+                    stiffness: 100,
+                    damping: 10,
+                  }}
+                  className=" fixed w-full h-full flex items-center justify-center text-white text-2xl"
+                >
+                  {japaneseMessages[japaneseMessageIndex]}
+                </motion.span>
+              )}
             </AnimatePresence>
           </motion.div>
         )}

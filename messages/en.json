@@ -170,5 +170,14 @@
   "Metadata": {
     "title": "Hi, I'm Aurélien",
     "description": "Entrepreneur. Passionate engineer."
+  },
+  "Locales": {
+    "Japanese": {
+      "messages": {
+        "didYouUnderstand": "Did you understand?",
+        "notMe": "Not me.",
+        "letsStayInEnglish": "So, let's stay in English 😅"
+      }
+    }
   }
 }

@@ -12,6 +12,7 @@ import { getFlagIcon } from "./flag-icon";
 export const locales = [
   { locale: "en", message: "Hello" },
   { locale: "fr", message: "Bonjour" },
+  { locale: "ja", message: "こんにちは" },
 ];
 
 export function LocaleSwitcher({

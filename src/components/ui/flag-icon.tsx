@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { Flag } from "lucide-react";
 
 interface FlagIconProps {
@@ -7,7 +8,7 @@ interface FlagIconProps {
 
 export const getFlagIcon = ({ locale, size = 4 }: FlagIconProps) => {
   const className = `h-${size} w-${size}`;
-  
+
   switch (locale) {
     case "en":
       return (
@@ -41,7 +42,21 @@ export const getFlagIcon = ({ locale, size = 4 }: FlagIconProps) => {
           <path fill="#f31830" d="M426.7 0H640v480H426.7z" />
         </svg>
       );
+    case "ja":
+      return (
+        <svg
+          className={cn(
+            className,
+            "border-1 border-foreground/10 dark:border-none"
+          )}
+          viewBox="0 0 640 480"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path fill="#fff" d="M0 0h640v480H0z" />
+          <circle cx="320" cy="240" r="160" fill="#bc002d" />
+        </svg>
+      );
     default:
       return <Flag className={className} />;
   }
-}; 
+};

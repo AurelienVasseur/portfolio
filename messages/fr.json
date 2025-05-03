@@ -170,5 +170,14 @@
   "Metadata": {
     "title": "Salut, je suis Aurélien",
     "description": "Entrepreneur. Ingénieur passionné."
+  },
+  "Locales": {
+    "Japanese": {
+      "messages": {
+        "didYouUnderstand": "Avez-vous compris ?",
+        "notMe": "Pas moi.",
+        "letsStayInEnglish": "Donc, restons en français 😅"
+      }
+    }
   }
 }
