@@ -140,7 +140,9 @@
       }
     },
     "footer": {
-      "text": "If you love palm trees and llamas, we'll be friends"
+      "text": "If you love palm trees and llamas, we'll be friends",
+      "version": "v{version}",
+      "commit": "{commit}"
     },
     "technologies": {
       "react": "React",

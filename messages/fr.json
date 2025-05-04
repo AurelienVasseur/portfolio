@@ -140,7 +140,9 @@
       }
     },
     "footer": {
-      "text": "Si tu aimes les palmiers et les lamas, on sera amis"
+      "text": "Si tu aimes les palmiers et les lamas, on sera amis",
+      "version": "v{version}",
+      "commit": "{commit}"
     },
     "technologies": {
       "react": "React",
