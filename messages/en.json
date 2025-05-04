@@ -171,7 +171,18 @@
   },
   "Metadata": {
     "title": "Hi, I'm Aurélien",
-    "description": "Entrepreneur. Passionate engineer."
+    "description": "Entrepreneur. Passionate engineer.",
+    "keywords": "developer, entrepreneur, engineer, full stack, web, react, typescript, nextjs, portfolio",
+    "author": "Aurélien",
+    "googleSiteVerification": "your-google-verification-code",
+    "images": {
+      "og": "/images/og-image.jpg",
+      "twitter": "/images/twitter-image.jpg",
+      "alt": "Aurélien - Full Stack Developer & Entrepreneur"
+    },
+    "social": {
+      "facebookAppId": "your-facebook-app-id"
+    }
   },
   "Locales": {
     "Japanese": {

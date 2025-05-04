@@ -1,4 +1,14 @@
-import { Caveat, Geist, Geist_Mono, Inter, JetBrains_Mono, Roboto_Mono } from "next/font/google";
+import {
+  Caveat,
+  Geist,
+  Geist_Mono,
+  Inter,
+  JetBrains_Mono,
+  Montserrat,
+  Roboto_Mono,
+  Raleway,
+  Quicksand,
+} from "next/font/google";
 
 export const inter = Inter({
   subsets: ["latin"],
@@ -26,6 +36,21 @@ export const roboto_mono = Roboto_Mono({
 });
 
 export const caveat = Caveat({
+  subsets: ["latin"],
+  display: "swap",
+});
+
+export const raleway = Raleway({
+  subsets: ["latin"],
+  display: "swap",
+});
+
+export const montserrat = Montserrat({
+  subsets: ["latin"],
+  display: "swap",
+});
+
+export const quicksand = Quicksand({
   subsets: ["latin"],
   display: "swap",
 });

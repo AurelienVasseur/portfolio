@@ -64,10 +64,10 @@ export function HeroSection({ className }: { className?: string }) {
                   #OneMonthOneProject
                 </Badge>
                 <div className="space-y-2 md:space-y-4 items-start w-full mt-2 md:mt-5">
-                  <h1 className="text-2xl md:text-5xl lg:text-[4rem] font-normal leading-tight tracking-tight">
+                  <h1 className="text-3xl md:text-5xl lg:text-[4rem] font-normal leading-tight tracking-tight">
                     {t("hero.title")}
                   </h1>
-                  <h2 className="text-2xl md:text-5xl lg:text-[4rem] font-normal leading-tight tracking-tight text-muted-foreground">
+                  <h2 className="text-3xl md:text-5xl lg:text-[4rem] font-normal leading-tight tracking-tight text-muted-foreground">
                     {t("hero.subtitle")}
                   </h2>
                 </div>

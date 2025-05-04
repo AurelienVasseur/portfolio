@@ -50,8 +50,8 @@ export function ProjectsSection() {
   const projects = projectsData.projects.filter(isProject);
 
   return (
-    <section id="projects">
-      <h2 className="text-3xl font-bold mb-8">{t("projects.title")}</h2>
+    <section id="projects" className="flex flex-col gap-10 md:gap-16">
+      <h2 className="text-3xl md:text-4xl">{t("projects.title")}</h2>
 
       <LayoutCards<Project>
         items={projects}

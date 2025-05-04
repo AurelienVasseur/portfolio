@@ -21,7 +21,7 @@ export default function TestimonialsSection() {
           <p
             className={cn(
               caveat.className,
-              "text-4xl transform xl:rotate-[-15deg] xl:-translate-x-1/3 whitespace-pre-line flex flex-col justify-center items-center text-center xl:w-4/3 font-semibold"
+              "text-3xl md:text-4xl transform xl:rotate-[-15deg] xl:-translate-x-1/3 whitespace-pre-line flex flex-col justify-center items-center text-center xl:w-4/3 font-semibold"
             )}
           >
             {t("testimonials.title")}
