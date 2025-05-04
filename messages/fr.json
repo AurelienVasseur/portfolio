@@ -176,12 +176,8 @@
     "author": "Aurélien",
     "googleSiteVerification": "votre-code-de-verification-google",
     "images": {
-      "og": "/images/og-image.jpg",
-      "twitter": "/images/twitter-image.jpg",
-      "alt": "Aurélien - Développeur Full Stack & Entrepreneur"
-    },
-    "social": {
-      "facebookAppId": "votre-facebook-app-id"
+      "og": "/metadata/og-image.png",
+      "alt": "Aurélien - Entrepreneur. Ingénieur passionné."
     }
   },
   "Locales": {

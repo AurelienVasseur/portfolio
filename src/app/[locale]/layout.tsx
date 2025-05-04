@@ -42,7 +42,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: t("title"),
       description: t("description"),
       creator: t("author"),
-      images: [t("images.twitter")],
+      images: [t("images.og")],
     },
     robots: {
       index: true,
