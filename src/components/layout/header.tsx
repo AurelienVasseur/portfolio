@@ -25,6 +25,7 @@ export function Header() {
   const [activeLocale, setActiveLocale] = useState(locale);
   const [isNewLocaleJapanese, setIsNewLocaleJapanese] = useState(false);
   const [japaneseMessageIndex, setJapaneseMessageIndex] = useState(0);
+  const [isJapaneseEasterEgg, setIsJapaneseEasterEgg] = useState(false);
 
   const japaneseMessages = [
     tLocales("Japanese.messages.didYouUnderstand"),
@@ -57,6 +58,7 @@ export function Header() {
   }, [activeSection]);
 
   const handleLocaleChange = (newLocale: string) => {
+    setIsJapaneseEasterEgg(newLocale === "ja");
     setIsLocaleChanging(true);
     setTimeout(() => {
       setActiveLocale(newLocale);
@@ -106,7 +108,7 @@ export function Header() {
           <motion.header
             id="header"
             key="header"
-            initial={{ y: 0, opacity: 0 }}
+            initial={{ y: -200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -100, opacity: 0 }}
             transition={{ type: "spring", stiffness: 100, damping: 10 }}
@@ -162,7 +164,10 @@ export function Header() {
             animate={{ top: 0, opacity: 1 }}
             exit={{ y: 40, opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="dark fixed top-0 left-0 w-full h-full z-50 bg-background"
+            className={cn(
+              "fixed top-0 left-0 w-full h-full z-50 bg-background text-foreground md:bg-foreground md:text-background md:dark:bg-background md:dark:text-foreground",
+              isJapaneseEasterEgg && "md:bg-background md:text-foreground"
+            )}
           >
             <AnimatePresence>
               {locales.map(
@@ -185,7 +190,7 @@ export function Header() {
                         stiffness: 100,
                         damping: 10,
                       }}
-                      className=" fixed w-full h-full flex items-center justify-center text-white text-2xl"
+                      className="fixed w-full h-full flex items-center justify-center text-2xl"
                     >
                       {l.message}
                     </motion.span>
@@ -204,7 +209,7 @@ export function Header() {
                     stiffness: 100,
                     damping: 10,
                   }}
-                  className=" fixed w-full h-full flex items-center justify-center text-white text-2xl"
+                  className=" fixed w-full h-full flex items-center justify-center text-2xl"
                 >
                   {japaneseMessages[japaneseMessageIndex]}
                 </motion.span>

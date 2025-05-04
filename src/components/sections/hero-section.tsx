@@ -16,8 +16,9 @@ import { FireEffect } from "../ui/fire-effect";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { cn } from "@/lib/utils";
 
-export function HeroSection() {
+export function HeroSection({ className }: { className?: string }) {
   const { scrollY } = useScroll();
   const scale = useTransform(scrollY, [0, 300], [1, 0.8]);
   const t = useTranslations("HomePage");
@@ -25,7 +26,10 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="h-screen mx-auto max-w-5xl w-full fixed space-y-24 flex flex-col justify-center px-8"
+      className={cn(
+        "w-full space-y-24 flex flex-col justify-center",
+        className
+      )}
     >
       <motion.div
         className="flex flex-col space-y-7"
@@ -41,7 +45,7 @@ export function HeroSection() {
       >
         <Link
           href="/"
-          className="mr-6 flex flex-col space-x-3 space-y-2 items-center justify-center"
+          className="mr-6 hidden md:flex flex-col space-x-3 space-y-2 items-center justify-center"
         >
           <Avatar className="size-12">
             <AvatarImage src="/aurelien.jpg" />
@@ -159,7 +163,7 @@ export function HeroSection() {
             </CardContent>
           </Card>
         </div>
-        <div
+        {/*<div
           onClick={() => {
             document
               .getElementById("header")
@@ -187,7 +191,7 @@ export function HeroSection() {
               <path d="m19 12-7 7-7-7" />
             </svg>
           </div>
-        </div>
+        </div>*/}
       </motion.div>
     </section>
   );
