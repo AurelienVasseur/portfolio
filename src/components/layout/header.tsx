@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar";
 import { ThemeToggle } from "../ui/theme-toggle";
 import { AnimatePresence, motion } from "framer-motion";
@@ -114,20 +113,16 @@ export function Header() {
             transition={{ type: "spring", stiffness: 100, damping: 10 }}
             className={cn("sticky top-0 z-50 pt-5 px-8 mx-auto max-w-5xl")}
           >
-            <div className="shadow-sm bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 rounded-2xl">
+            <div className="shadow-sm bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 rounded-2xl overflow-hidden">
               <div className="mx-auto max-w-5xl px-4 py-1">
                 <div className="flex h-14 items-center justify-between">
                   <div className="flex items-center">
-                    <Link
-                      href="/"
-                      className="mr-6 flex items-center space-x-3 overflow-hidden h-11"
-                    >
+                    <div className="mr-6 flex justify-center items-center gap-3 h-11">
                       <Avatar className="size-11">
                         <AvatarImage src="/aurelien.jpg" />
                         <AvatarFallback>AV</AvatarFallback>
                       </Avatar>
-
-                      <div className="relative w-40 h-11 overflow-hidden">
+                      <div className="hidden md:flex items-center">
                         <AnimatePresence initial={false} mode="popLayout">
                           <motion.span
                             key={activeSection}
@@ -135,15 +130,15 @@ export function Header() {
                             animate={{ y: 0, opacity: 1 }}
                             exit={{ y: 40, opacity: 0 }}
                             transition={{ duration: 0.4 }}
-                            className="absolute inset-0 flex items-center font-normal"
+                            className="font-normal text-nowrap"
                           >
                             {t(`header.sections.${activeSection}`)}
                           </motion.span>
                         </AnimatePresence>
                       </div>
-                    </Link>
+                    </div>
                   </div>
-                  <div className="flex items-center space-x-4">
+                  <div className="flex items-center gap-1 md:gap-4">
                     <LocaleSwitcher
                       handleLocaleChange={handleLocaleChange}
                       activeLocale={activeLocale}
