@@ -98,47 +98,47 @@ export function HeroSection({ className }: { className?: string }) {
                 {[
                   {
                     name: t("technologies.javascript"),
-                    image: "/javascript.png",
+                    image: "/technologies/javascript.png",
                     fallback: "JS",
                   },
                   {
                     name: t("technologies.typescript"),
-                    image: "/typescript.png",
+                    image: "/technologies/typescript.png",
                     fallback: "TS",
                   },
                   {
                     name: t("technologies.nextjs"),
-                    image: "/nextjs.png",
+                    image: "/technologies/nextjs.png",
                     fallback: "NX",
                   },
                   {
                     name: t("technologies.shadcnui"),
-                    image: "/shadcnui.png",
+                    image: "/technologies/shadcnui.png",
                     fallback: "SH",
                   },
                   {
                     name: t("technologies.supabase"),
-                    image: "/supabase.png",
+                    image: "/technologies/supabase.png",
                     fallback: "SB",
                   },
                   {
                     name: t("technologies.mongodb"),
-                    image: "/mongodb.png",
+                    image: "/technologies/mongodb.png",
                     fallback: "MO",
                   },
                   {
                     name: t("technologies.tailwind"),
-                    image: "/tailwindcss.png",
+                    image: "/technologies/tailwindcss.png",
                     fallback: "TC",
                   },
                   {
                     name: t("technologies.vercel"),
-                    image: "/vercel.svg",
+                    image: "/technologies/vercel.svg",
                     fallback: "VC",
                   },
                   {
                     name: t("technologies.heroku"),
-                    image: "/heroku.png",
+                    image: "/technologies/heroku.png",
                     fallback: "HK",
                   },
                   {

@@ -39,47 +39,67 @@
       "sections": {
         "whoAmI": {
           "title": "Qui suis-je ?",
-          "description": "Je suis un développeur passionné par la création d'applications web modernes et performantes. Mon expertise couvre l'ensemble de la stack web, du front-end au back-end."
+          "description": "Je suis entrepreneur et ingénieur fullstack. Je conçois des produits web avec une approche centrée sur l'utilisateur et l'humain."
         },
-        "skills": {
-          "title": "Mes compétences",
-          "description": "React, TypeScript, Node.js, Python, et bien plus encore. Je m'efforce constamment d'apprendre de nouvelles technologies pour rester à la pointe de l'innovation."
+        "entrepreneur": {
+          "title": "Un profil hybride",
+          "description": "Je développe des applications web modernes. En parallèle, je co-dirige avec ma conjointe plusieurs micro-crèches dans l'est de la France."
         },
-        "approach": {
-          "title": "Mon approche",
-          "description": "Je privilégie une approche centrée sur l'utilisateur, en créant des interfaces intuitives et des expériences utilisateur exceptionnelles."
+        "productApproach": {
+          "title": "Une vision produit",
+          "description": "Je pense les projets comme des produits. Utiles, simples, durables. Je cherche à créer de la valeur, pas juste du code."
+        },
+        "tech": {
+          "title": "Côté technique",
+          "description": "Je maîtrise le développement fullstack. Front-end, back-end, bases de données, déploiement : je gère toute la chaîne."
+        },
+        "human": {
+          "title": "L'humain d'abord",
+          "description": "Dans le code comme dans les crèches, je mets l'accent sur l'écoute, la clarté, et l'impact réel sur les gens."
         },
         "projects": {
           "title": "Mes projets",
           "description": "J'ai travaillé sur divers projets, des applications web aux solutions d'entreprise, en mettant l'accent sur la qualité du code et la performance."
+        },
+        "end": {
+          "title": "",
+          "description": ""
         }
       }
     },
     "experiences": {
       "title": "Ils me font confiance",
       "current": "En cours",
+      "since": "Depuis",
       "done": "Terminé",
       "companyTypes": {
         "startup": "Startup",
         "bigCompany": "Grande entreprise"
       },
       "experienceTypes": {
-        "client": "Projet Client",
+        "client": "Client",
         "internship": "Stage"
       },
       "positions": {
+        "softwareEngineerLead": "Ingénieur Full Stack Lead",
+        "softwareEngineer": "Ingénieur Full Stack",
         "fullStack": "Développeur Full Stack"
       },
       "locations": {
         "paris": "Paris, France",
-        "belfort": "Belfort, France"
+        "belfort": "Belfort, France",
+        "brussels": "Bruxelles, Belgique",
+        "amiens": "Amiens, France",
+        "besancon": "Besançon, France",
+        "dijon": "Dijon, France"
       },
       "descriptions": {
-        "isagri": "Description du projet client et des réalisations",
-        "ringTwice": "Description du projet client et des réalisations",
-        "aquantic": "Description du projet client et des réalisations",
-        "flowbird": "Description du projet client et des réalisations",
-        "resumify": "Création d'un site web pour la création de CV en ligne"
+        "isagri": "J'ai participé à la migration et à la mise à jour de sites web en ASP.NET. J'ai développé de nouvelles fonctionnalités, corrigé des bugs et collaboré activement au sein de l'équipe technique.",
+        "ringTwice": "J'ai contribué au développement d'une application web en Ruby on Rails au sein d'une équipe multiculturelle basée à Bruxelles. J'ai intégré de nouvelles fonctionnalités, accéléré le développement existant et renforcé les tests pour fiabiliser les livraisons.",
+        "aquantic": "J'ai piloté la refonte digitale d'Aquantic, de la vision produit au déploiement. J'ai conçu l'architecture, encadré le développement, organisé les releases, et assuré l'intégration continue. J'ai aussi contribué à la stratégie globale de l'entreprise aux côtés de l'équipe business.",
+        "flowbird": "J'ai assuré la maintenance et l'évolution d'applications web legacy critiques (AngularJS/Node.js), utilisées pour configurer des terminaux de paiement. Mes missions ont inclus des migrations techniques, l'audit de sécurité, l'ajout de fonctionnalités et la mise à jour vers des versions plus modernes de Node.js et AngularJS.",
+        "resumify": "“Show. Don't tell. Who you are. What you did. In one single link.” Je pilote le développement de Resumify, une application web de CV nouvelle génération. J'y assure la vision produit, l'architecture technique, le développement fullstack et je participe à la stratégie business et au développement des partenariats.",
+        "anthropi": "Je contribue à la structuration technique d'un système en constante évolution. J'interviens sur la correction de bugs, l'ajout de nouvelles fonctionnalités et l'optimisation de la scalabilité. Je renforce également les tests et les processus de validation pour fiabiliser les livraisons et accélérer le rythme de développement."
       }
     },
     "projects": {
@@ -166,6 +186,13 @@
       "mongodb": "MongoDB",
       "vercel": "Vercel",
       "heroku": "Heroku",
+      "docker": "Docker",
+      "nuxtjs": "Nuxt.js",
+      "ruby": "Ruby",
+      "rails": "Ruby on Rails",
+      "aspnet": "ASP.NET",
+      "csharp": "C#",
+      "mariadb": "MariaDB",
       "andMore": "Et plus encore..."
     }
   },

@@ -7,12 +7,12 @@
       "startDate": "2022-06",
       "endDate": "2023-05",
       "current": false,
-      "location": "experiences.locations.paris",
+      "location": "experiences.locations.amiens",
       "description": "experiences.descriptions.isagri",
       "technologies": [
-        "technologies.vue",
-        "technologies.python",
-        "technologies.postgresql"
+        "technologies.aspnet",
+        "technologies.csharp",
+        "technologies.javascript"
       ],
       "internship": true,
       "logoFile": "isagri.jpeg",
@@ -22,16 +22,17 @@
     {
       "id": 2,
       "company": "Ring Twice",
-      "position": "experiences.positions.fullStack",
+      "position": "experiences.positions.softwareEngineer",
       "startDate": "2022-06",
       "endDate": "2023-05",
       "current": false,
-      "location": "experiences.locations.paris",
+      "location": "experiences.locations.brussels",
       "description": "experiences.descriptions.ringTwice",
       "technologies": [
-        "technologies.vue",
-        "technologies.python",
-        "technologies.postgresql"
+        "technologies.ruby",
+        "technologies.rails",
+        "technologies.postgresql",
+        "technologies.javascript"
       ],
       "internship": true,
       "logoFile": "ringtwice.jpeg",
@@ -41,16 +42,19 @@
     {
       "id": 3,
       "company": "Aquantic",
-      "position": "experiences.positions.fullStack",
+      "position": "experiences.positions.softwareEngineerLead",
       "startDate": "2022-06",
       "endDate": "2023-05",
       "current": false,
-      "location": "experiences.locations.paris",
+      "location": "experiences.locations.belfort",
       "description": "experiences.descriptions.aquantic",
       "technologies": [
         "technologies.vue",
-        "technologies.python",
-        "technologies.postgresql"
+        "technologies.nuxtjs",
+        "technologies.heroku",
+        "technologies.postgresql",
+        "technologies.javascript",
+        "technologies.typescript"
       ],
       "client": true,
       "logoFile": "aquantic.jpeg",
@@ -61,16 +65,18 @@
     {
       "id": 4,
       "company": "Flowbird",
-      "position": "experiences.positions.fullStack",
+      "position": "experiences.positions.softwareEngineer",
       "startDate": "2022-06",
       "endDate": "2023-05",
       "current": false,
-      "location": "experiences.locations.paris",
+      "location": "experiences.locations.besancon",
       "description": "experiences.descriptions.flowbird",
       "technologies": [
-        "technologies.vue",
-        "technologies.python",
-        "technologies.postgresql"
+        "technologies.angular",
+        "technologies.nodejs",
+        "technologies.postgresql",
+        "technologies.docker",
+        "technologies.javascript"
       ],
       "client": true,
       "logoFile": "flowbird.png",
@@ -80,7 +86,7 @@
     {
       "id": 5,
       "company": "Resumify",
-      "position": "experiences.positions.fullStack",
+      "position": "experiences.positions.softwareEngineerLead",
       "startDate": "2023-01",
       "endDate": "",
       "current": true,
@@ -89,12 +95,40 @@
       "technologies": [
         "technologies.react",
         "technologies.nodejs",
-        "technologies.typescript"
+        "technologies.typescript",
+        "technologies.tailwind",
+        "technologies.docker",
+        "technologies.shadcnui",
+        "technologies.supabase",
+        "technologies.vercel"
       ],
       "client": true,
-      "logoFile": "resumify.jpeg",
+      "logoFile": "resumify.png",
       "startup": true,
       "mainColor": "#0e1a23"
+    },
+    {
+      "id": 6,
+      "company": "AnthroPi",
+      "position": "experiences.positions.softwareEngineerLead",
+      "startDate": "2025-05",
+      "endDate": "",
+      "current": true,
+      "location": "experiences.locations.dijon",
+      "description": "experiences.descriptions.anthropi",
+      "technologies": [
+        "technologies.angular",
+        "technologies.nodejs",
+        "technologies.typescript",
+        "technologies.python",
+        "technologies.docker",
+        "technologies.mongodb",
+        "technologies.mariadb"
+      ],
+      "client": true,
+      "logoFile": "anthropi.png",
+      "startup": true,
+      "mainColor": "#036093"
     }
   ]
 }

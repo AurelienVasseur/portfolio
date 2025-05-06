@@ -31,9 +31,12 @@ export default function CardExperience({
   // Détermination du label principal
   let mainLabel = "";
   if (experience.startup) mainLabel = t("experiences.companyTypes.startup");
-  else if (experience.bigCompany) mainLabel = t("experiences.companyTypes.bigCompany");
-  else if (experience.client) mainLabel = t("experiences.experienceTypes.client");
-  else if (experience.internship) mainLabel = t("experiences.experienceTypes.internship");
+  else if (experience.bigCompany)
+    mainLabel = t("experiences.companyTypes.bigCompany");
+  else if (experience.client)
+    mainLabel = t("experiences.experienceTypes.client");
+  else if (experience.internship)
+    mainLabel = t("experiences.experienceTypes.internship");
 
   // Couleur par défaut si non spécifiée
   const mainColor = experience.mainColor || "#1a1a1a";
@@ -80,7 +83,7 @@ export default function CardExperience({
         <img
           src={`/experiences/${experience.logoFile}`}
           alt={`Logo ${experience.company}`}
-          className="w-16 h-16 object-contain"
+          className="w-16 h-16 object-contain rounded-sm"
         />
       </div>
 
@@ -100,16 +103,27 @@ export default function CardExperience({
           <h3 className="text-2xl font-bold mb-2">{t(experience.position)}</h3>
           <h4 className="text-xl mb-4">{experience.company}</h4>
           <p className="text-sm mb-2">
-            {experience.startDate} -{" "}
-            {experience.current ? "Present" : experience.endDate}
+            {experience.current && `${t("experiences.since")} `}
+            {experience.startDate}
+            {!experience.current && ` - ${experience.endDate}`}
           </p>
           <p className="text-sm mb-4">{t(experience.location)}</p>
           <p className="text-sm mb-4">{t(experience.description)}</p>
           <div className="flex flex-wrap gap-2">
+            {experience.client && (
+              <span className="px-3 py-1 rounded-full bg-white/5 text-white text-xs font-semibold border border-white/20">
+                {t("experiences.experienceTypes.client")}
+              </span>
+            )}
+            {experience.internship && (
+              <span className="px-3 py-1 rounded-full bg-white/5 text-white text-xs font-semibold border border-white/20">
+                {t("experiences.experienceTypes.internship")}
+              </span>
+            )}
             {experience.technologies.map((tech, index) => (
               <span
                 key={index}
-                className="px-3 py-1 rounded-full bg-white/10 text-white text-xs font-semibold backdrop-blur-sm border border-white/20"
+                className="px-3 py-1 rounded-full bg-white/20 text-white text-xs font-semibold border border-white/20"
               >
                 {t(tech)}
               </span>

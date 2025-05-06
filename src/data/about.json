@@ -7,22 +7,34 @@
       "image": "/images/aurelien.jpg"
     },
     {
-      "id": "skills",
-      "titleKey": "about.sections.skills.title",
-      "descriptionKey": "about.sections.skills.description",
-      "image": "/images/skills.jpg"
+      "id": "entrepreneur",
+      "titleKey": "about.sections.entrepreneur.title",
+      "descriptionKey": "about.sections.entrepreneur.description"
     },
     {
-      "id": "approach",
-      "titleKey": "about.sections.approach.title",
-      "descriptionKey": "about.sections.approach.description",
-      "image": "/images/approach.jpg"
+      "id": "productApproach",
+      "titleKey": "about.sections.productApproach.title",
+      "descriptionKey": "about.sections.productApproach.description"
+    },
+    {
+      "id": "tech",
+      "titleKey": "about.sections.tech.title",
+      "descriptionKey": "about.sections.tech.description"
+    },
+    {
+      "id": "human",
+      "titleKey": "about.sections.human.title",
+      "descriptionKey": "about.sections.human.description"
     },
     {
       "id": "projects",
       "titleKey": "about.sections.projects.title",
-      "descriptionKey": "about.sections.projects.description",
-      "image": "/images/projects.jpg"
+      "descriptionKey": "about.sections.projects.description"
+    },
+    {
+      "id": "end",
+      "titleKey": "about.sections.end.title",
+      "descriptionKey": "about.sections.end.description"
     }
   ]
 } 
