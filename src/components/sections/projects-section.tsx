@@ -15,6 +15,7 @@ interface Project extends BaseItem {
   size: "normal" | "large";
   technologies: string[];
   workInProgress?: boolean;
+  mainColor: string;
 }
 
 type ProjectData = {
@@ -27,6 +28,7 @@ type ProjectData = {
   size: unknown;
   technologies: unknown;
   workInProgress?: unknown;
+  mainColor: unknown;
 };
 
 function isProject(item: unknown): item is Project {
@@ -41,7 +43,8 @@ function isProject(item: unknown): item is Project {
     typeof project.githubUrl === "string" &&
     typeof project.websiteUrl === "string" &&
     (project.size === "normal" || project.size === "large") &&
-    Array.isArray(project.technologies)
+    Array.isArray(project.technologies) &&
+    typeof project.mainColor === "string"
   );
 }
 
