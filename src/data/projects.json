@@ -1,13 +1,14 @@
 {
   "projects": [
     {
-      "id": 1,
-      "name": "projects.names.project1",
-      "githubUrl": "https://github.com/username/project",
-      "websiteUrl": "https://project-website.com",
-      "imageFiles": ["aurelien.jpg", "aurelien.jpg", "aurelien.jpg"],
-      "description": "projects.descriptions.project1",
+      "id": 8,
+      "name": "projects.names.project8",
+      "githubUrl": "https://github.com/AurelienVasseur/nike-ui",
+      "websiteUrl": "https://nike-ui-five.vercel.app/",
+      "imageFiles": ["aurelien.jpg", "aurelien.jpg"],
+      "description": "projects.descriptions.project8",
       "size": "normal",
+      "mainColor": "#000000",
       "technologies": [
         "technologies.react",
         "technologies.typescript",
@@ -17,48 +18,114 @@
       "workInProgress": true
     },
     {
-      "id": 2,
-      "name": "projects.names.project2",
-      "githubUrl": "https://github.com/username/project",
-      "websiteUrl": "https://project-website.com",
-      "imageFiles": ["aurelien.jpg", "aurelien.jpg", "aurelien.jpg"],
-      "description": "projects.descriptions.project2",
+      "id": 7,
+      "name": "projects.names.project7",
+      "githubUrl": "https://github.com/AurelienVasseur/nike-ui",
+      "websiteUrl": "https://nike-ui-five.vercel.app/",
+      "imageFiles": ["aurelien.jpg", "aurelien.jpg"],
+      "description": "projects.descriptions.project7",
       "size": "large",
+      "mainColor": "#000000",
       "technologies": [
-        "technologies.vue",
-        "technologies.javascript",
-        "technologies.nodejs",
-        "technologies.express"
+        "technologies.react",
+        "technologies.typescript",
+        "technologies.nextjs",
+        "technologies.tailwind"
+      ],
+      "workInProgress": true
+    },
+    {
+      "id": 6,
+      "name": "projects.names.project6",
+      "githubUrl": "https://github.com/AurelienVasseur/joke-generator",
+      "websiteUrl": "https://joke-generator-blond.vercel.app/",
+      "imageFiles": ["joke-generator-1.png", "joke-generator-2.png", "joke-generator-3.png", "joke-generator-4.png", "joke-generator-5.png"],
+      "description": "projects.descriptions.project6",
+      "size": "large",
+      "mainColor": "#a640ff",
+      "technologies": [
+        "technologies.nextjs",
+        "technologies.typescript",
+        "technologies.tailwind",
+        "technologies.framer"
       ]
     },
     {
-      "id": 3,
-      "name": "projects.names.project3",
-      "githubUrl": "https://github.com/username/project",
-      "websiteUrl": "https://project-website.com",
-      "imageFiles": ["aurelien.jpg", "aurelien.jpg", "aurelien.jpg"],
-      "description": "projects.descriptions.project3",
-      "size": "large",
+      "id": 5,
+      "name": "projects.names.project5",
+      "githubUrl": "https://github.com/AurelienVasseur/getname",
+      "websiteUrl": "https://getname.vercel.app/",
+      "imageFiles": ["getname-1.png", "getname-2.png", "getname-3.png"],
+      "description": "projects.descriptions.project5",
+      "size": "normal",
+      "mainColor": "#0a0a0a",
       "technologies": [
-        "technologies.angular",
+        "technologies.nextjs",
         "technologies.typescript",
-        "technologies.firebase",
-        "technologies.materialui"
+        "technologies.tailwind",
+        "technologies.framer"
       ]
     },
     {
       "id": 4,
       "name": "projects.names.project4",
-      "githubUrl": "https://github.com/username/project",
-      "websiteUrl": "https://project-website.com",
-      "imageFiles": ["aurelien.jpg", "aurelien.jpg", "aurelien.jpg"],
+      "githubUrl": "https://github.com/AurelienVasseur/fresh-portfolio",
+      "websiteUrl": "https://fresh-portfolio-tan.vercel.app/",
+      "imageFiles": ["fresh-portfolio-1.png"],
       "description": "projects.descriptions.project4",
       "size": "normal",
+      "mainColor": "#5c5884",
       "technologies": [
-        "technologies.svelte",
-        "technologies.javascript",
-        "technologies.d3",
-        "technologies.css"
+        "technologies.nextjs",
+        "technologies.typescript",
+        "technologies.tailwind"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "projects.names.project3",
+      "githubUrl": "https://github.com/AurelienVasseur/travel-ui",
+      "websiteUrl": "https://travel-ui-one.vercel.app/",
+      "imageFiles": ["travelui-1.png", "travelui-2.png", "travelui-3.png"],
+      "description": "projects.descriptions.project3",
+      "size": "large",
+      "mainColor": "#30af5b",
+      "technologies": [
+        "technologies.nextjs",
+        "technologies.typescript",
+        "technologies.tailwind"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "projects.names.project2",
+      "githubUrl": "https://github.com/AurelienVasseur/blue-bird",
+      "websiteUrl": "https://blue-bird-delta-nine.vercel.app/",
+      "imageFiles": ["aurelien.jpg", "aurelien.jpg", "aurelien.jpg"],
+      "description": "projects.descriptions.project2",
+      "size": "large",
+      "mainColor": "#111827",
+      "technologies": [
+        "technologies.nextjs",
+        "technologies.typescript",
+        "technologies.supabase",
+        "technologies.tailwind"
+      ]
+    },
+    {
+      "id": 1,
+      "name": "projects.names.project1",
+      "githubUrl": "https://github.com/AurelienVasseur/nike-ui",
+      "websiteUrl": "https://nike-ui-five.vercel.app/",
+      "imageFiles": ["nikeui-1.png", "nikeui-2.png"],
+      "description": "projects.descriptions.project1",
+      "size": "normal",
+      "mainColor": "#fe6a54",
+      "technologies": [
+        "technologies.react",
+        "technologies.typescript",
+        "technologies.vitejs",
+        "technologies.tailwind"
       ]
     }
   ]

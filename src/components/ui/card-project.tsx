@@ -22,6 +22,7 @@ interface Project {
   size?: "normal" | "large";
   technologies: string[];
   workInProgress?: boolean;
+  mainColor: string;
 }
 
 interface CardProjectProps {
@@ -60,16 +61,21 @@ export function CardProject({ project, isExpanded = false }: CardProjectProps) {
   if (!isExpanded) {
     return (
       <Card
-        className="p-0 overflow-hidden transition-all h-80"
+        className="p-0 overflow-hidden transition-all h-80 group"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         <div className="w-full h-full relative">
-          <img
-            src={`/images/${project.imageFiles[0]}`}
-            alt={project.name}
-            className="w-full h-full object-cover"
-          />
+          <div
+            className="w-full h-full relative bg-amber-500 flex items-center justify-center p-3"
+            style={{ backgroundColor: project.mainColor }}
+          >
+            <img
+              src={`/projects/${project.imageFiles[0]}`}
+              alt={project.name}
+              className="max-h-full max-w-full object-contain rounded-lg shadow-2xl md:scale-80 md:group-hover:scale-100 transition-all duration-300"
+            />
+          </div>
           {project.workInProgress && (
             <div className="absolute inset-0 backdrop-blur-sm z-10" />
           )}
@@ -107,11 +113,15 @@ export function CardProject({ project, isExpanded = false }: CardProjectProps) {
             <div className="flex gap-6">
               {project.imageFiles.map((image, index) => (
                 <div key={index} className="flex-[0_0_100%]">
-                  <div className="aspect-video w-full bg-muted rounded-lg overflow-hidden">
+                  <div
+                    className="aspect-video rounded-lg overflow-hidden p-5 flex items-center justify-center"
+                    style={{ backgroundColor: project.mainColor }}
+                  >
                     <img
-                      src={`/images/${image}`}
+                      src={`/projects/${image}`}
                       alt={t(project.name)}
-                      className="w-full h-full object-cover"
+                      className="max-h-full max-w-full object-contain rounded-lg shadow-2xl"
+                      style={{ backgroundColor: project.mainColor }}
                     />
                   </div>
                 </div>
@@ -126,13 +136,13 @@ export function CardProject({ project, isExpanded = false }: CardProjectProps) {
         <div className="flex flex-col md:flex-row gap-2 md:items-center md:align-middle">
           <h2 className="text-xl font-semibold">{t(project.name)}</h2>
           <div className="flex flex-row gap-2 items-center align-middle">
-            <Link href={project.githubUrl}>
+            <Link href={project.githubUrl} target="_blank">
               <span className="px-2 py-0.5 rounded-full bg-primary/30 text-primary text-xs border border-primary/20 hover:bg-primary/40 transition-colors cursor-pointer flex items-center gap-1">
                 <IconBrandGithub className="h-3 w-3" />
                 {t("projects.card.github")}
               </span>
             </Link>
-            <Link href={project.websiteUrl}>
+            <Link href={project.websiteUrl} target="_blank">
               <span className="px-2 py-0.5 rounded-full bg-blue-500/30 text-blue-500 text-xs border border-blue-500/20 hover:bg-blue-500/40 transition-colors cursor-pointer flex items-center gap-1">
                 <IconRocket className="h-3 w-3" />
                 {t("projects.card.explore")}
