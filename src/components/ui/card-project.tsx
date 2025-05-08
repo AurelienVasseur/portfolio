@@ -52,13 +52,21 @@ export function CardProject({ project, isExpanded = false }: CardProjectProps) {
 
   useEffect(() => {
     if (!emblaApi) return;
-
     onScroll(emblaApi);
     emblaApi
       .on("reInit", onScroll)
       .on("scroll", onScroll)
       .on("slideFocus", onScroll);
-  }, [emblaApi, onScroll]);
+    if (isExpanded) {
+      const preventScroll = (e: WheelEvent) => {
+        e.preventDefault();
+      };
+      document.addEventListener("wheel", preventScroll, { passive: false });
+      return () => {
+        document.removeEventListener("wheel", preventScroll);
+      };
+    }
+  }, [emblaApi, onScroll, isExpanded]);
 
   if (!isExpanded) {
     return (
