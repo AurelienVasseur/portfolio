@@ -2,14 +2,14 @@
 
 import { LayoutCards, BaseItem } from "@/components/ui/layout-cards";
 import { CardProject } from "@/components/ui/card-project";
-import projectsData from "@/data/projects.json";
 import { useTranslations } from "next-intl";
+import rawProjectsData from "@/data/projects.json";
 
 interface Project extends BaseItem {
   id: number;
   name: string;
   description: string;
-  imageFiles: string[];
+  imageFiles: string[] | never[];
   githubUrl: string;
   websiteUrl: string;
   size: "normal" | "large";
@@ -31,6 +31,12 @@ type ProjectData = {
   mainColor: unknown;
 };
 
+type ProjectsData = {
+  projects: Project[];
+};
+
+const projectsData = rawProjectsData as ProjectsData;
+
 function isProject(item: unknown): item is Project {
   const project = item as ProjectData;
   return (
@@ -44,6 +50,7 @@ function isProject(item: unknown): item is Project {
     typeof project.websiteUrl === "string" &&
     (project.size === "normal" || project.size === "large") &&
     Array.isArray(project.technologies) &&
+    project.technologies.every((tech) => typeof tech === "string") &&
     typeof project.mainColor === "string"
   );
 }

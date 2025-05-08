@@ -173,7 +173,7 @@ export default function Home() {
               <ExperiencesSection />
               <ProjectsSection />
               <ContactSection />
-              <TestimonialsSection />
+              {/* <TestimonialsSection /> */}
               <Footer />
             </motion.div>
           </AnimatePresence>

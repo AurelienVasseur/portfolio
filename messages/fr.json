@@ -111,8 +111,8 @@
         "project4": "Fresh Portfolio",
         "project5": "GetName",
         "project6": "Joke Generator",
-        "project7": "Project Name",
-        "project8": "Project Name"
+        "project7": "Bookootro",
+        "project8": "List-it"
       },
       "descriptions": {
         "project1": "Un clone de la UI de Nike.",
@@ -120,7 +120,7 @@
         "project3": "Un site de voyage.",
         "project4": "Un portfolio modern et design.",
         "project5": "GetName est une application web moderne qui aide les utilisateurs à trouver le nom parfait pour leurs projets en vérifiant l'existence du nom de domaine et des médias sociaux en temps réel.",
-        "project6": "Bienvenue dans le générateur de blagues le plus ridicule (et pourtant surprenantement utile) jamais fait ! Cet projet a commencé comme une simple expérience : \"Qu'en serait-il si je laissais l'IA m'aider à construire quelque chose de complètement absurde ?\" Et oui, oh oui, ça a livré ! Le résultat ? Un chef-d'œuvre de générateur de blagues qui va probablement révolutionner l'industrie de la comédie... ou du moins rendre votre pause café un peu plus amusante. Construit en quelques heures en utilisant Cursor, l'IDE alimenté par l'IA qui change la donne (ou du moins en fait un peu plus amusant) !",
+        "project6": "Un chef-d'œuvre de générateur de blagues qui va probablement révolutionner l'industrie de la comédie... ou du moins rendre votre pause café un peu plus amusante. Construit en quelques heures en utilisant Cursor !",
         "project7": "Description détaillée du projet",
         "project8": "Description détaillée du projet"
       },

@@ -111,8 +111,8 @@
         "project4": "Fresh Portfolio",
         "project5": "GetName",
         "project6": "Joke Generator",
-        "project7": "Project Name",
-        "project8": "Project Name"
+        "project7": "Bookootro",
+        "project8": "List-it"
       },
       "descriptions": {
         "project1": "A Nike UI clone.",
@@ -120,7 +120,7 @@
         "project3": "A travel agency website.",
         "project4": "A fresh and design portfolio website.",
         "project5": "GetName is a modern web application that helps users find the perfect name for their projects by checking domain name and social media availability in real-time.",
-        "project6": "Welcome to the most ridiculous (and yet surprisingly useful) joke generator ever made! This project started as a simple experiment: \"What if I let AI help me build something completely absurd?\" And boy, oh boy, did it deliver! The result? A joke-generating masterpiece that's probably going to revolutionize the comedy industry... or at least make your coffee break a bit more amusing. Built in just a few hours using Cursor - the AI-powered IDE that's changing the game (or at least making it way more entertaining)!",
+        "project6": "A joke-generating masterpiece that's probably going to revolutionize the comedy industry... or at least make your coffee break a bit more amusing. Built in just a few hours using Cursor!",
         "project7": "Detailed project description",
         "project8": "Detailed project description"
       },

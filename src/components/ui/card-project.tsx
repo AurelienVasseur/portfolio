@@ -11,12 +11,13 @@ import { useTranslations } from "next-intl";
 
 import Autoplay from "embla-carousel-autoplay";
 import { IconBrandGithub, IconRocket } from "@tabler/icons-react";
+import { cn } from "@/lib/utils";
 
 interface Project {
   id: number;
   name: string;
   description: string;
-  imageFiles: string[];
+  imageFiles: string[] | never[];
   githubUrl: string;
   websiteUrl: string;
   size?: "normal" | "large";
@@ -61,7 +62,10 @@ export function CardProject({ project, isExpanded = false }: CardProjectProps) {
   if (!isExpanded) {
     return (
       <Card
-        className="p-0 overflow-hidden transition-all h-80 group"
+        className={cn(
+          "p-0 overflow-hidden transition-all h-80 group",
+          project.workInProgress && "cursor-default"
+        )}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
@@ -70,11 +74,13 @@ export function CardProject({ project, isExpanded = false }: CardProjectProps) {
             className="w-full h-full relative bg-amber-500 flex items-center justify-center p-3"
             style={{ backgroundColor: project.mainColor }}
           >
-            <img
-              src={`/projects/${project.imageFiles[0]}`}
-              alt={project.name}
-              className="max-h-full max-w-full object-contain rounded-lg shadow-2xl md:scale-80 md:group-hover:scale-100 transition-all duration-300"
-            />
+            {project.imageFiles.length > 0 && (
+              <img
+                src={`/projects/${project.imageFiles[0]}`}
+                alt={project.name}
+                className="max-h-full max-w-full object-contain rounded-lg shadow-2xl md:scale-80 md:group-hover:scale-100 transition-all duration-300"
+              />
+            )}
           </div>
           {project.workInProgress && (
             <div className="absolute inset-0 backdrop-blur-sm z-10" />
@@ -95,7 +101,7 @@ export function CardProject({ project, isExpanded = false }: CardProjectProps) {
               {t(project.name)}
             </span>
             {project.workInProgress && (
-              <span className="px-4 py-1 rounded-full bg-orange-500/30 text-orange-400 text-xs font-semibold border border-orange-500/20">
+              <span className="px-4 py-1 rounded-full bg-white/30 text-white text-xs font-semibold  border border-white/20">
                 🚧 {t("projects.status.workInProgress")}
               </span>
             )}
