@@ -52,7 +52,7 @@ export default function Home() {
     setIsSmallScreen(isSmall);
   }, []);
 
-  // Toute action dans hero => scroll vers menu
+  // Any action in hero => scroll to menu
   useEffect(() => {
     if (isSmallScreen) return;
     const handleHeroInteraction = (e: Event) => {
@@ -76,13 +76,13 @@ export default function Home() {
     const onKeyDown = (e: KeyboardEvent) => {
       if (locked.current || !menuInView) return;
       if (e.key === "Escape") {
-        // ESCAPE dans menu => retour au hero
+        // ESCAPE in menu => return to hero
         e.preventDefault();
         scrollToTop();
       }
       if (e.key === " " || e.key === "Enter") {
-        // Enter and space => scroll vers le début du contenu
-        e.preventDefault(); // empêche le scroll de la page avec space
+        // Enter and space => scroll to content start
+        e.preventDefault(); // prevents page scroll with space
         scrollTo("contentStart", "start");
       }
     };
@@ -99,7 +99,7 @@ export default function Home() {
     };
   }, [menuInView, isSmallScreen]);
 
-  // Si on est tout en haut de content → scroll vers menu
+  // If we're at the top of content → scroll to menu
   useEffect(() => {
     if (isSmallScreen) return;
     const contentEl = contentRef.current;

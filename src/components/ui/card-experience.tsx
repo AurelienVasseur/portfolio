@@ -28,7 +28,7 @@ export default function CardExperience({
   const t = useTranslations("HomePage");
   const [isClicked, setIsClicked] = useState(false);
 
-  // Détermination du label principal
+  // Determine main label
   let mainLabel = "";
   if (experience.startup) mainLabel = t("experiences.companyTypes.startup");
   else if (experience.bigCompany)
@@ -38,7 +38,7 @@ export default function CardExperience({
   else if (experience.internship)
     mainLabel = t("experiences.experienceTypes.internship");
 
-  // Couleur par défaut si non spécifiée
+  // Default color if not specified
   const mainColor = experience.mainColor || "#1a1a1a";
 
   return (
@@ -51,7 +51,7 @@ export default function CardExperience({
     >
       {/* <BackgroundParticlesAnimation /> */}
 
-      {/* Badge principal en haut à gauche */}
+      {/* Main badge at top left */}
       {mainLabel && (
         <div className="absolute top-5 left-5 z-10">
           <span className="px-4 py-1 rounded-full bg-white/10 text-white text-xs font-semibold backdrop-blur-md border border-white/20">
@@ -60,7 +60,7 @@ export default function CardExperience({
         </div>
       )}
 
-      {/* Indicateur de statut en haut à droite */}
+      {/* Status indicator at top right */}
       <div className="absolute top-5 right-5 z-10">
         {experience.current ? (
           <span className="px-3 py-1 rounded-full bg-green-500/20 text-white text-xs font-semibold backdrop-blur-sm border border-green-500/30 flex items-center gap-1.5 animate-pulse">
@@ -78,7 +78,7 @@ export default function CardExperience({
         )}
       </div>
 
-      {/* Logo centré */}
+      {/* Centered logo */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-24 h-24 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center shadow-md transition-transform duration-300 group-hover:scale-110 border border-white/20">
         <img
           src={`/experiences/${experience.logoFile}`}
@@ -87,7 +87,7 @@ export default function CardExperience({
         />
       </div>
 
-      {/* Détails de l'expérience avec backdrop blur */}
+      {/* Experience details with backdrop blur */}
       <div
         className={`absolute inset-0 bg-black/50 backdrop-blur-md z-20 p-6 flex flex-col text-white transition-all duration-300 ease-in-out ${
           isClicked

@@ -1,8 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Website
+
+A modern, responsive portfolio website built with Next.js 15, featuring a beautiful UI and smooth animations. This project showcases my professional experience, projects, and skills in an interactive way.
+
+## Features
+
+- 🌐 **Internationalization**: Built-in support for multiple languages (English and French)
+- 🎨 **Modern UI**: Clean and responsive design using Tailwind CSS and Shadcn/ui
+- ✨ **Smooth Animations**: Enhanced user experience with Framer Motion
+- 📱 **Responsive Design**: Optimized for all screen sizes
+- 🎯 **Interactive Navigation**: Smooth scrolling and keyboard navigation
+- 🌓 **Dark Mode**: Built-in dark mode support
+- 🚀 **Performance**: Optimized for speed and SEO
+
+## Tech Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com)
+- **UI Components**: [Shadcn/ui](https://ui.shadcn.com)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide Icons](https://lucide.dev)
+- **Carousel**: [Embla Carousel](https://embla-carousel.com)
+- **Internationalization**: [next-intl](https://next-intl-docs.vercel.app)
 
 ## Getting Started
 
-First, run the development server:
+First, clone the repository and install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -16,21 +50,47 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+portfolio/
+├── src/
+│   ├── app/                 # Next.js app directory
+│   │   └── [locale]/        # Internationalized routes
+│   ├── components/          # React components
+│   │   ├── layout/         # Layout components
+│   │   ├── sections/       # Page sections
+│   │   └── ui/            # Reusable UI components
+│   ├── data/              # Static data (experiences, projects)
+│   └── i18n/              # Internationalization setup
+├── public/                # Static assets
+└── messages/             # Translation files
+```
 
-## Learn More
+## Customization
 
-To learn more about Next.js, take a look at the following resources:
+### Adding New Languages
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Create a new translation file in `messages/` directory (e.g., `es.json`)
+2. Add the new locale to the supported locales in `src/i18n/routing.ts`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Modifying Content
 
-## Deploy on Vercel
+- Update experience data in `src/data/experiences.json`
+- Modify translations in `messages/en.json` and `messages/fr.json`
+- Customize UI components in `src/components/`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This application is deployed on [Vercel](https://vercel.com). The deployment is fully automated through GitHub integration.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [Shadcn/ui Documentation](https://ui.shadcn.com)
+- [Framer Motion Documentation](https://www.framer.com/motion/)
