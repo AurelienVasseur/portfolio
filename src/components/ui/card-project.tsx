@@ -8,6 +8,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { EmblaCarouselType } from "embla-carousel";
 import { ProgressBar } from "./progress-bar";
 import { useTranslations } from "next-intl";
+import { WorkInProgressAnimation } from "./work-in-progress-animation";
 
 import Autoplay from "embla-carousel-autoplay";
 import { IconBrandGithub, IconRocket } from "@tabler/icons-react";
@@ -74,13 +75,15 @@ export function CardProject({ project, isExpanded = false }: CardProjectProps) {
             className="w-full h-full relative bg-amber-500 flex items-center justify-center p-3"
             style={{ backgroundColor: project.mainColor }}
           >
-            {project.imageFiles.length > 0 && (
+            {project.imageFiles.length > 0 ? (
               <img
                 src={`/projects/${project.imageFiles[0]}`}
                 alt={project.name}
                 className="max-h-full max-w-full object-contain rounded-lg shadow-2xl md:scale-80 md:group-hover:scale-100 transition-all duration-300"
               />
-            )}
+            ) : project.workInProgress ? (
+              <WorkInProgressAnimation />
+            ) : null}
           </div>
           {project.workInProgress && (
             <div className="absolute inset-0 backdrop-blur-sm z-10" />
